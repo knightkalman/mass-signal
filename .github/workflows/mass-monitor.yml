@@ -1,0 +1,93 @@
+name: Mass Signal Monitor & GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/mass-monitor.yml"
+      - "mass_monitor.py"
+      - "site/**"
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mass-signal-monitor
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect 22 Watchlist Ticker Prices
+        run: |
+          output_path="data/mass/$(date -u +%F).jsonl"
+          python mass_monitor.py \
+            --once \
+            --output "$output_path" \
+            --state-db data/mass_monitor_state.sqlite3
+          echo "MASS_OUTPUT_PATH=$output_path" >> "$GITHUB_ENV"
+
+      - name: Save collected data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/mass/ data/mass_monitor_state.sqlite3
+          if ! git diff --cached --quiet; then
+            git commit -m "Update mass monitor data (22 tickers)"
+            git push
+          fi
+
+  deploy-dashboard:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository data
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up dashboard data
+        run: |
+          mkdir -p site/data/mass
+          cp data/mass/*.jsonl site/data/mass/
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          files = sorted(path.name for path in Path("site/data/mass").glob("*.jsonl"))
+          Path("site/data/mass/index.json").write_text(
+              json.dumps({"files": files}, indent=2), encoding="utf-8"
+          )
+          PY
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload dashboard
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4

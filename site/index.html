@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a20">
+  <title>Mass Signal — 22 Watchlist Tickers</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101a20;
+      --panel: #17242b;
+      --panel-light: #1c2b33;
+      --line: #30424a;
+      --text: #edf2ec;
+      --muted: #9aadae;
+      --green: #76d6a0;
+      --green-glow: rgba(118, 214, 160, 0.15);
+      --blue: #77c8ec;
+      --orange: #ffbb70;
+      --red: #ff8d82;
+      --red-glow: rgba(255, 141, 130, 0.15);
+      --yellow: #f3d17c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 15% -15%, #243c39 0, transparent 40rem),
+        radial-gradient(ellipse at 85% -10%, #1c2f38 0, transparent 35rem),
+        var(--bg);
+      color: var(--text);
+      font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, input, select { font: inherit; }
+
+    .shell {
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 0 0 60px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 0 20px;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(16, 26, 32, 0.92);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      font-size: 1.6rem;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .brand-title h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-title .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .header-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-input {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      width: 170px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus {
+      border-color: var(--green);
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn:hover { border-color: var(--green); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 0 18px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .pill-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: #1c2b33;
+      border: 1px solid var(--line);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .pill.bullish { color: var(--green); border-color: rgba(118, 214, 160, 0.3); }
+    .pill.bearish { color: var(--red); border-color: rgba(255, 141, 130, 0.3); }
+
+    /* Grid Layout for 22 Tickers */
+    .tickers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .tickers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Ticker Card */
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(155deg, var(--panel-light), var(--panel));
+      padding: 14px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .card:hover {
+      border-color: #445963;
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .card-title-group {
+      min-width: 0;
+    }
+
+    .ticker-symbol-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ticker-symbol {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .instrument-badge {
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #23353e;
+      color: var(--muted);
+      font-family: ui-monospace, monospace;
+    }
+
+    .ticker-name {
+      color: var(--muted);
+      font-size: 0.78rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1px;
+    }
+
+    .card-price-group {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .ticker-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.03em;
+    }
+
+    .ticker-change {
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .ticker-change.positive { color: var(--green); }
+    .ticker-change.negative { color: var(--red); }
+    .ticker-change.neutral { color: var(--muted); }
+
+    /* Chart SVG Area */
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      margin: 4px 0 6px;
+      background: rgba(16, 26, 32, 0.4);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .chart-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .grid-line {
+      stroke: #25353d;
+      stroke-dasharray: 2 4;
+      stroke-width: 1;
+    }
+
+    .axis-label {
+      fill: #708485;
+      font-size: 9px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    .chart-line.positive { stroke: var(--green); }
+    .chart-line.negative { stroke: var(--red); }
+    .chart-line.neutral { stroke: var(--blue); }
+
+    .chart-area {
+      stroke: none;
+      opacity: 0.22;
+    }
+    .chart-area.positive { fill: url(#green-grad); }
+    .chart-area.negative { fill: url(#red-grad); }
+    .chart-area.neutral { fill: url(#blue-grad); }
+
+    .prev-close-line {
+      stroke: #536b75;
+      stroke-dasharray: 2 4;
+      stroke-width: 1;
+      opacity: 0.6;
+    }
+
+    .crosshair {
+      stroke: #9aadae;
+      stroke-width: 1;
+      stroke-dasharray: 2 2;
+      display: none;
+    }
+
+    .hover-dot {
+      r: 4;
+      stroke-width: 2;
+      stroke: #101a20;
+      display: none;
+    }
+    .hover-dot.positive { fill: var(--green); }
+    .hover-dot.negative { fill: var(--red); }
+
+    /* Card Footer Stats */
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(48, 66, 74, 0.5);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .card-footer span b {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Tooltip */
+    .tooltip-float {
+      position: absolute;
+      padding: 3px 7px;
+      background: #1e3038;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      color: var(--text);
+      font-size: 0.7rem;
+      pointer-events: none;
+      transform: translate(-50%, -120%);
+      white-space: nowrap;
+      display: none;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand-wrap">
+        <span class="brand-mark">∿</span>
+        <div class="brand-title">
+          <h1>MASS SIGNAL</h1>
+          <p class="subtitle">22 Watchlist Tickers Monitor &amp; Live Intraday Charts</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <input type="text" id="search-box" class="search-input" placeholder="Filter tickers… (e.g. NVDA, OIL)" autocomplete="off">
+        <button id="refresh-btn" class="btn">
+          <span>↻</span> Refresh
+        </button>
+      </div>
+    </header>
+
+    <div class="meta-bar">
+      <div class="pill-group">
+        <span class="pill" id="total-count-pill">22 Tickers</span>
+        <span class="pill bullish" id="bullish-count-pill">— Bullish</span>
+        <span class="pill bearish" id="bearish-count-pill">— Bearish</span>
+      </div>
+      <div id="last-updated">Loading live market data…</div>
+    </div>
+
+    <!-- 22 Tickers Grid -->
+    <main class="tickers-grid" id="tickers-grid" aria-live="polite">
+      <div class="empty-state">Loading ticker charts…</div>
+    </main>
+  </div>
+
+  <script>
+    "use strict";
+
+    const SVG_NS = "http://www.w3.org/2000/svg";
+    const tickersGrid = document.querySelector("#tickers-grid");
+    const lastUpdatedEl = document.querySelector("#last-updated");
+    const refreshBtn = document.querySelector("#refresh-btn");
+    const searchBox = document.querySelector("#search-box");
+    const totalCountPill = document.querySelector("#total-count-pill");
+    const bullishCountPill = document.querySelector("#bullish-count-pill");
+    const bearishCountPill = document.querySelector("#bearish-count-pill");
+
+    let allTickerData = {};
+    let activeFilter = "";
+
+    const TICKER_DEFS = [
+      { symbol: "OIL", id: 17, name: "Crude Oil (WTI)", yahoo: "CL=F", asset: "commodities" },
+      { symbol: "NVDA", id: 1137, name: "NVIDIA Corporation", yahoo: "NVDA", asset: "stocks" },
+      { symbol: "MU", id: 1130, name: "Micron Technology Inc.", yahoo: "MU", asset: "stocks" },
+      { symbol: "ORCL", id: 1135, name: "Oracle Corporation", yahoo: "ORCL", asset: "stocks" },
+      { symbol: "CAT", id: 1012, name: "Caterpillar Inc.", yahoo: "CAT", asset: "stocks" },
+      { symbol: "GS", id: 1467, name: "The Goldman Sachs Group Inc.", yahoo: "GS", asset: "stocks" },
+      { symbol: "INTC", id: 1021, name: "Intel Corporation", yahoo: "INTC", asset: "stocks" },
+      { symbol: "MS", id: 1976, name: "Morgan Stanley", yahoo: "MS", asset: "stocks" },
+      { symbol: "PLTR", id: 7991, name: "Palantir Technologies Inc.", yahoo: "PLTR", asset: "stocks" },
+      { symbol: "SHOP", id: 4148, name: "Shopify Inc.", yahoo: "SHOP", asset: "stocks" },
+      { symbol: "AMD", id: 1832, name: "Advanced Micro Devices Inc.", yahoo: "AMD", asset: "stocks" },
+      { symbol: "ASML", id: 4244, name: "ASML Holding N.V.", yahoo: "ASML", asset: "stocks" },
+      { symbol: "ARM", id: 1365, name: "Arm Holdings plc", yahoo: "ARM", asset: "stocks" },
+      { symbol: "TXN", id: 1634, name: "Texas Instruments Incorporated", yahoo: "TXN", asset: "stocks" },
+      { symbol: "COP", id: 1510, name: "ConocoPhillips", yahoo: "COP", asset: "stocks" },
+      { symbol: "MRK", id: 1027, name: "Merck & Co., Inc.", yahoo: "MRK", asset: "stocks" },
+      { symbol: "GOOGL", id: 6434, name: "Alphabet Inc.", yahoo: "GOOGL", asset: "stocks" },
+      { symbol: "QCOM", id: 1485, name: "QUALCOMM Incorporated", yahoo: "QCOM", asset: "stocks" },
+      { symbol: "AMZN", id: 1005, name: "Amazon.com Inc.", yahoo: "AMZN", asset: "stocks" },
+      { symbol: "META", id: 1003, name: "Meta Platforms Inc.", yahoo: "META", asset: "stocks" },
+      { symbol: "CRWD", id: 5506, name: "CrowdStrike Holdings Inc.", yahoo: "CRWD", asset: "stocks" },
+      { symbol: "HOOD", id: 9272, name: "Robinhood Markets, Inc.", yahoo: "HOOD", asset: "stocks" },
+    ];
+
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+
+    function svgEl(tag, attrs = {}) {
+      const node = document.createElementNS(SVG_NS, tag);
+      for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, String(v));
+      return node;
+    }
+
+    function formatTime(isoStr) {
+      if (!isoStr) return "";
+      try {
+        const d = new Date(isoStr);
+        return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) + " UTC";
+      } catch {
+        return "";
+      }
+    }
+
+    function createChart(ticker, item, width = 420, height = 135) {
+      const history = (item && Array.isArray(item.history) && item.history.length > 0)
+        ? item.history
+        : (item && item.price ? [{ timestamp: item.price_timestamp || new Date().toISOString(), price: item.price }] : []);
+
+      const isPositive = (item?.change ?? 0) >= 0;
+      const statusClass = isPositive ? "positive" : "negative";
+
+      const container = el("div", "chart-container");
+      const tooltip = el("div", "tooltip-float");
+      container.append(tooltip);
+
+      const svg = svgEl("svg", {
+        viewBox: `0 0 ${width} ${height}`,
+        preserveAspectRatio: "none",
+        class: "chart-svg"
+      });
+
+      // Defs for gradients
+      const defs = svgEl("defs");
+
+      // Green gradient
+      const greenGrad = svgEl("linearGradient", { id: `green-grad-${ticker.symbol}`, x1: "0", y1: "0", x2: "0", y2: "1" });
+      greenGrad.append(svgEl("stop", { offset: "0%", "stop-color": "#76d6a0", "stop-opacity": "0.35" }));
+      greenGrad.append(svgEl("stop", { offset: "100%", "stop-color": "#76d6a0", "stop-opacity": "0.0" }));
+
+      // Red gradient
+      const redGrad = svgEl("linearGradient", { id: `red-grad-${ticker.symbol}`, x1: "0", y1: "0", x2: "0", y2: "1" });
+      redGrad.append(svgEl("stop", { offset: "0%", "stop-color": "#ff8d82", "stop-opacity": "0.35" }));
+      redGrad.append(svgEl("stop", { offset: "100%", "stop-color": "#ff8d82", "stop-opacity": "0.0" }));
+
+      defs.append(greenGrad, redGrad);
+      svg.append(defs);
+
+      if (!history.length) {
+        svg.append(svgEl("text", {
+          x: width / 2,
+          y: height / 2,
+          "text-anchor": "middle",
+          fill: "#708485",
+          "font-size": "11"
+        }));
+        container.append(svg);
+        return container;
+      }
+
+      const paddingLeft = 38;
+      const paddingRight = 14;
+      const paddingTop = 12;
+      const paddingBottom = 16;
+      const plotWidth = width - paddingLeft - paddingRight;
+      const plotHeight = height - paddingTop - paddingBottom;
+
+      const prices = history.map(h => Number(h.price)).filter(Number.isFinite);
+      const prevClose = Number(item?.previous_close);
+      if (Number.isFinite(prevClose)) prices.push(prevClose);
+
+      let minP = Math.min(...prices);
+      let maxP = Math.max(...prices);
+      const span = maxP - minP;
+      const padP = Math.max(span * 0.1, maxP * 0.003, 0.01);
+      minP -= padP;
+      maxP += padP;
+
+      const getX = (idx, total) => paddingLeft + (total > 1 ? (idx / (total - 1)) * plotWidth : plotWidth / 2);
+      const getY = (price) => paddingTop + (1 - (price - minP) / (maxP - minP)) * plotHeight;
+
+      // Horizontal grid lines & Y labels (3 levels)
+      for (let i = 0; i <= 2; i++) {
+        const pVal = minP + ((maxP - minP) * i) / 2;
+        const yCoord = getY(pVal);
+        svg.append(svgEl("line", {
+          x1: paddingLeft,
+          x2: width - paddingRight,
+          y1: yCoord,
+          y2: yCoord,
+          class: "grid-line"
+        }));
+        const pFormatted = pVal >= 1000 ? pVal.toFixed(0) : pVal >= 10 ? pVal.toFixed(1) : pVal.toFixed(2);
+        const label = svgEl("text", {
+          x: paddingLeft - 4,
+          y: yCoord + 3,
+          "text-anchor": "end",
+          class: "axis-label"
+        });
+        label.textContent = pFormatted;
+        svg.append(label);
+      }
+
+      // Previous close reference line
+      if (Number.isFinite(prevClose) && prevClose >= minP && prevClose <= maxP) {
+        const prevY = getY(prevClose);
+        svg.append(svgEl("line", {
+          x1: paddingLeft,
+          x2: width - paddingRight,
+          y1: prevY,
+          y2: prevY,
+          class: "prev-close-line"
+        }));
+      }
+
+      // Path coordinates
+      const points = history.map((pt, idx) => ({
+        x: getX(idx, history.length),
+        y: getY(pt.price),
+        raw: pt
+      }));
+
+      // Build path string
+      let dPath = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
+      for (let i = 1; i < points.length; i++) {
+        dPath += ` L ${points[i].x.toFixed(1)} ${points[i].y.toFixed(1)}`;
+      }
+
+      // Area fill path
+      const dArea = `${dPath} L ${points[points.length - 1].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} L ${points[0].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} Z`;
+
+      const areaEl = svgEl("path", {
+        d: dArea,
+        fill: isPositive ? `url(#green-grad-${ticker.symbol})` : `url(#red-grad-${ticker.symbol})`,
+        opacity: "0.4"
+      });
+
+      const lineEl = svgEl("path", {
+        d: dPath,
+        class: `chart-line ${statusClass}`
+      });
+
+      svg.append(areaEl, lineEl);
+
+      // Interactive hover elements
+      const crosshair = svgEl("line", {
+        y1: paddingTop,
+        y2: paddingTop + plotHeight,
+        class: "crosshair"
+      });
+      const hoverDot = svgEl("circle", {
+        class: `hover-dot ${statusClass}`
+      });
+      svg.append(crosshair, hoverDot);
+
+      // Mousemove handler
+      container.addEventListener("mousemove", (e) => {
+        const rect = container.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const normalizedX = (mouseX / rect.width) * width;
+
+        if (normalizedX < paddingLeft || normalizedX > width - paddingRight) {
+          crosshair.style.display = "none";
+          hoverDot.style.display = "none";
+          tooltip.style.display = "none";
+          return;
+        }
+
+        // Find nearest point
+        let nearest = points[0];
+        let minDist = Infinity;
+        for (const pt of points) {
+          const dist = Math.abs(pt.x - normalizedX);
+          if (dist < minDist) {
+            minDist = dist;
+            nearest = pt;
+          }
+        }
+
+        crosshair.setAttribute("x1", nearest.x);
+        crosshair.setAttribute("x2", nearest.x);
+        crosshair.style.display = "block";
+
+        hoverDot.setAttribute("cx", nearest.x);
+        hoverDot.setAttribute("cy", nearest.y);
+        hoverDot.style.display = "block";
+
+        tooltip.textContent = `$${Number(nearest.raw.price).toFixed(2)} · ${formatTime(nearest.raw.timestamp)}`;
+        tooltip.style.left = `${(nearest.x / width) * 100}%`;
+        tooltip.style.top = `${(nearest.y / height) * 100}%`;
+        tooltip.style.display = "block";
+      });
+
+      container.addEventListener("mouseleave", () => {
+        crosshair.style.display = "none";
+        hoverDot.style.display = "none";
+        tooltip.style.display = "none";
+      });
+
+      container.append(svg);
+      return container;
+    }
+
+    function renderCards() {
+      tickersGrid.replaceChildren();
+
+      let bullishCount = 0;
+      let bearishCount = 0;
+      let visibleCount = 0;
+
+      const filterLower = activeFilter.trim().toLowerCase();
+
+      for (const def of TICKER_DEFS) {
+        const symKey = def.symbol.toLowerCase();
+        const data = allTickerData[symKey] || {};
+
+        const matches = !filterLower ||
+          def.symbol.toLowerCase().includes(filterLower) ||
+          def.name.toLowerCase().includes(filterLower) ||
+          String(def.id).includes(filterLower);
+
+        const change = Number(data.change ?? 0);
+        const changePct = Number(data.change_percent ?? 0);
+        const isBullish = change > 0;
+        const isBearish = change < 0;
+
+        if (isBullish) bullishCount++;
+        else if (isBearish) bearishCount++;
+
+        if (!matches) continue;
+        visibleCount++;
+
+        const card = el("article", "card");
+        card.setAttribute("id", `card-${def.symbol.toLowerCase()}`);
+
+        // Card Header
+        const header = el("div", "card-header");
+
+        const titleGroup = el("div", "card-title-group");
+        const symbolRow = el("div", "ticker-symbol-row");
+        symbolRow.append(el("span", "ticker-symbol", def.symbol));
+        symbolRow.append(el("span", "instrument-badge", `#${def.id}`));
+        symbolRow.append(el("span", `pill ${isBullish ? "bullish" : isBearish ? "bearish" : ""}`, def.asset === "commodities" ? "OIL" : "STOCK"));
+
+        const nameEl = el("div", "ticker-name", def.name);
+        titleGroup.append(symbolRow, nameEl);
+
+        const priceGroup = el("div", "card-price-group");
+        const curPrice = Number(data.price);
+        const priceStr = Number.isFinite(curPrice) ? `$${curPrice.toFixed(2)}` : "—";
+        const priceEl = el("div", "ticker-price", priceStr);
+
+        const changeClass = isBullish ? "ticker-change positive" : isBearish ? "ticker-change negative" : "ticker-change neutral";
+        const sign = change > 0 ? "+" : "";
+        const changeStr = Number.isFinite(change) && Number.isFinite(changePct)
+          ? `${sign}${change.toFixed(2)} (${sign}${changePct.toFixed(2)}%)`
+          : "—";
+        const changeEl = el("div", changeClass, changeStr);
+
+        priceGroup.append(priceEl, changeEl);
+        header.append(titleGroup, priceGroup);
+        card.append(header);
+
+        // Chart
+        const chartNode = createChart(def, data);
+        card.append(chartNode);
+
+        // Card Footer Stats
+        const footer = el("div", "card-footer");
+        const prevClose = Number(data.previous_close);
+        const prevCloseStr = Number.isFinite(prevClose) ? `$${prevClose.toFixed(2)}` : "—";
+
+        const prices = (data.history || []).map(h => Number(h.price)).filter(Number.isFinite);
+        const dayLow = prices.length ? Math.min(...prices) : (Number.isFinite(curPrice) ? curPrice : null);
+        const dayHigh = prices.length ? Math.max(...prices) : (Number.isFinite(curPrice) ? curPrice : null);
+
+        const lowHighStr = (dayLow !== null && dayHigh !== null) ? `$${dayLow.toFixed(2)} – $${dayHigh.toFixed(2)}` : "—";
+
+        const statsLeft = el("span");
+        statsLeft.innerHTML = `Range: <b>${lowHighStr}</b>`;
+
+        const statsRight = el("span");
+        statsRight.innerHTML = `Prev: <b>${prevCloseStr}</b> · <span>${formatTime(data.price_timestamp)}</span>`;
+
+        footer.append(statsLeft, statsRight);
+        card.append(footer);
+
+        tickersGrid.append(card);
+      }
+
+      totalCountPill.textContent = `${visibleCount} of ${TICKER_DEFS.length} Tickers`;
+      bullishCountPill.textContent = `${bullishCount} Bullish`;
+      bearishCountPill.textContent = `${bearishCount} Bearish`;
+
+      if (visibleCount === 0) {
+        tickersGrid.append(el("div", "empty-state", `No tickers match filter "${activeFilter}"`));
+      }
+    }
+
+    async function loadData() {
+      refreshBtn.disabled = true;
+      lastUpdatedEl.textContent = "Fetching latest market quotes…";
+
+      try {
+        // Attempt to fetch index from site/data/mass/index.json
+        const idxRes = await fetch(`data/mass/index.json?t=${Date.now()}`, { cache: "no-store" });
+        if (!idxRes.ok) throw new Error(`Data index returned status ${idxRes.status}`);
+        const idxJson = await idxRes.json();
+        const files = Array.isArray(idxJson.files) ? idxJson.files : [];
+        if (!files.length) throw new Error("No data files in index");
+
+        const latestFile = files[files.length - 1];
+        const dataRes = await fetch(`data/mass/${encodeURIComponent(latestFile)}?t=${Date.now()}`, { cache: "no-store" });
+        if (!dataRes.ok) throw new Error(`Failed to load ${latestFile}`);
+        const text = await dataRes.text();
+
+        const lines = text.split(/\r?\n/).filter(Boolean);
+        if (!lines.length) throw new Error("Empty data file");
+
+        // Parse latest record
+        const record = JSON.parse(lines[lines.length - 1]);
+        allTickerData = record.prices || {};
+
+        renderCards();
+        lastUpdatedEl.textContent = `Updated ${formatTime(record.collected_at)} (${files.length} archive days)`;
+      } catch (err) {
+        console.warn("Could not load remote index, attempting direct fallback file...", err);
+        try {
+          // Fallback to data/mass/latest.jsonl or embedded current day
+          const today = new Date().toISOString().slice(0, 10);
+          const directRes = await fetch(`data/mass/${today}.jsonl?t=${Date.now()}`, { cache: "no-store" });
+          if (!directRes.ok) throw new Error("Direct fallback unavailable");
+          const text = await directRes.text();
+          const lines = text.split(/\r?\n/).filter(Boolean);
+          const record = JSON.parse(lines[lines.length - 1]);
+          allTickerData = record.prices || {};
+          renderCards();
+          lastUpdatedEl.textContent = `Updated ${formatTime(record.collected_at)} (direct fallback)`;
+        } catch (innerErr) {
+          console.error("Failed to load ticker data:", innerErr);
+          lastUpdatedEl.textContent = "Data unavailable — ensure GitHub Actions collection has run.";
+        }
+      } finally {
+        refreshBtn.disabled = false;
+      }
+    }
+
+    searchBox.addEventListener("input", (e) => {
+      activeFilter = e.target.value;
+      renderCards();
+    });
+
+    refreshBtn.addEventListener("click", loadData);
+
+    // Auto-refresh cadence (every 5 minutes)
+    window.setInterval(loadData, 5 * 60 * 1000);
+
+    // Initial load
+    loadData();
+  </script>
+</body>
+</html>

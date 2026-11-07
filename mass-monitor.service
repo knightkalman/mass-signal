@@ -1,0 +1,13 @@
+[Unit]
+Description=Mass Signal 22 Watchlist Tickers Monitor
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/kalman/Desktop/git/mass-signal
+ExecStart=/usr/bin/python3 /home/kalman/Desktop/git/mass-signal/mass_monitor.py --interval-seconds 300 --output /home/kalman/Desktop/git/mass-signal/data/mass/latest.jsonl --state-db /home/kalman/Desktop/git/mass-signal/data/mass_monitor_state.sqlite3
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=default.target
