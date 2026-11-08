@@ -79,8 +79,8 @@ def sentiment_for_change(
 
 def fetch_yahoo_price(
     symbol_def: dict[str, Any],
-    range_str: str = "1d",
-    interval_str: str = "5m",
+    range_str: str = "7d",
+    interval_str: str = "15m",
 ) -> dict[str, Any]:
     symbol = symbol_def["symbol"]
     yahoo_symbol = symbol_def["yahoo_symbol"]
@@ -229,8 +229,8 @@ def main() -> int:
     parser.add_argument("--once", action="store_true", help="Run collection once and exit")
     parser.add_argument("--output", type=Path, default=Path("data/mass/latest.jsonl"), help="Output JSONL path")
     parser.add_argument("--state-db", type=Path, default=Path("data/mass_monitor_state.sqlite3"), help="SQLite state db path")
-    parser.add_argument("--range", dest="history_range", default="1d", help="History range (1d, 5d, 1mo)")
-    parser.add_argument("--interval", dest="history_interval", default="5m", help="History interval (1m, 5m, 15m)")
+    parser.add_argument("--range", dest="history_range", default="7d", help="History range (1d, 5d, 7d, 1mo)")
+    parser.add_argument("--interval", dest="history_interval", default="15m", help="History interval (1m, 5m, 15m)")
     parser.add_argument("--interval-seconds", type=int, default=300, help="Loop interval in seconds when not running --once")
     args = parser.parse_args()
 

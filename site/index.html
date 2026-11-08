@@ -21,6 +21,7 @@
       --red: #ff8d82;
       --red-glow: rgba(255, 141, 130, 0.15);
       --yellow: #f3d17c;
+      --amber: #f59e0b;
     }
 
     * { box-sizing: border-box; }
@@ -57,8 +58,8 @@
       border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      background: rgba(16, 26, 32, 0.92);
-      backdrop-filter: blur(10px);
+      background: rgba(16, 26, 32, 0.94);
+      backdrop-filter: blur(12px);
       z-index: 100;
     }
 
@@ -92,6 +93,39 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 10px;
+    }
+
+    /* 24h / 7d Timeframe Switcher */
+    .timeframe-switch {
+      display: inline-flex;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .timeframe-btn {
+      padding: 5px 13px;
+      border: none;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      transition: all 0.15s ease;
+    }
+    .timeframe-btn:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .timeframe-btn.active {
+      background: #233742;
+      color: var(--green);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
     }
 
     .search-input {
@@ -140,6 +174,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .pill {
@@ -155,15 +190,27 @@
     }
     .pill.bullish { color: var(--green); border-color: rgba(118, 214, 160, 0.3); }
     .pill.bearish { color: var(--red); border-color: rgba(255, 141, 130, 0.3); }
+    .pill.pill-closed {
+      color: var(--yellow);
+      border-color: rgba(243, 209, 124, 0.45);
+      background: rgba(243, 209, 124, 0.12);
+    }
+    .pill.pill-closed .closed-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      display: inline-block;
+    }
 
     /* Grid Layout for 22 Tickers */
     .tickers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
       gap: 16px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .tickers-grid {
         grid-template-columns: 1fr;
       }
@@ -174,7 +221,7 @@
       border: 1px solid var(--line);
       border-radius: 12px;
       background: linear-gradient(155deg, var(--panel-light), var(--panel));
-      padding: 14px 16px 12px;
+      padding: 13px 16px 12px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -185,22 +232,25 @@
       transform: translateY(-2px);
     }
 
+    /* Card Header: 3-column layout (Symbol/Title | Center Matrix | Price) */
     .card-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 8px;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 8px;
     }
 
     .card-title-group {
       min-width: 0;
+      flex: 1 1 auto;
     }
 
     .ticker-symbol-row {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-wrap: wrap;
     }
 
     .ticker-symbol {
@@ -211,8 +261,8 @@
     }
 
     .instrument-badge {
-      font-size: 0.7rem;
-      padding: 1px 6px;
+      font-size: 0.68rem;
+      padding: 1px 5px;
       border-radius: 4px;
       background: #23353e;
       color: var(--muted);
@@ -221,27 +271,111 @@
 
     .ticker-name {
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-top: 1px;
+      max-width: 140px;
     }
 
+    /* Center Matrix: News Sentiment & Technical Indicators */
+    .card-center-matrix {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      flex: 1 0 auto;
+      padding: 0 4px;
+    }
+
+    .center-matrix-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .matrix-sent-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    .matrix-sent-badge.bullish {
+      background: rgba(118, 214, 160, 0.16);
+      color: var(--green);
+      border: 1px solid rgba(118, 214, 160, 0.35);
+    }
+    .matrix-sent-badge.bearish {
+      background: rgba(255, 141, 130, 0.16);
+      color: var(--red);
+      border: 1px solid rgba(255, 141, 130, 0.35);
+    }
+    .matrix-sent-badge.neutral,
+    .matrix-sent-badge.mixed,
+    .matrix-sent-badge.unclear {
+      background: rgba(243, 209, 124, 0.16);
+      color: var(--yellow);
+      border: 1px solid rgba(243, 209, 124, 0.35);
+    }
+
+    .matrix-sent-score {
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: ui-monospace, monospace;
+      color: var(--text);
+    }
+
+    .matrix-sent-counts {
+      font-size: 0.68rem;
+      color: var(--muted);
+      font-family: ui-monospace, monospace;
+    }
+
+    .matrix-tech-trend {
+      font-size: 0.72rem;
+      cursor: help;
+    }
+
+    .matrix-tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: rgba(28, 43, 51, 0.85);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-family: ui-monospace, monospace;
+    }
+    .matrix-tech-pill b {
+      color: var(--text);
+    }
+
+    /* Price Group */
     .card-price-group {
       text-align: right;
       flex-shrink: 0;
     }
 
     .ticker-price {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
       letter-spacing: -0.03em;
     }
 
     .ticker-change {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
@@ -255,7 +389,7 @@
       width: 100%;
       height: 140px;
       margin: 4px 0 6px;
-      background: rgba(16, 26, 32, 0.4);
+      background: rgba(16, 26, 32, 0.45);
       border-radius: 6px;
       overflow: hidden;
     }
@@ -292,9 +426,6 @@
       stroke: none;
       opacity: 0.22;
     }
-    .chart-area.positive { fill: url(#green-grad); }
-    .chart-area.negative { fill: url(#red-grad); }
-    .chart-area.neutral { fill: url(#blue-grad); }
 
     .prev-close-line {
       stroke: #536b75;
@@ -303,6 +434,40 @@
       opacity: 0.6;
     }
 
+    /* Weekend / Market Closed SVG Features */
+    .weekend-closed-band {
+      fill: #f3d17c;
+      opacity: 0.08;
+    }
+
+    .weekend-boundary {
+      stroke: #f3d17c;
+      stroke-width: 1.2;
+      stroke-dasharray: 3 4;
+      opacity: 0.75;
+    }
+
+    .weekend-label {
+      fill: #f3d17c;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      opacity: 0.88;
+      pointer-events: none;
+    }
+
+    .weekend-carry-line {
+      fill: none;
+      stroke-width: 2.0;
+      stroke-dasharray: 3 4;
+      stroke-linecap: round;
+      opacity: 0.75;
+    }
+    .weekend-carry-line.positive { stroke: var(--green); }
+    .weekend-carry-line.negative { stroke: var(--red); }
+    .weekend-carry-line.neutral { stroke: var(--blue); }
+
+    /* Interactive Hover */
     .crosshair {
       stroke: #9aadae;
       stroke-width: 1;
@@ -318,6 +483,38 @@
     }
     .hover-dot.positive { fill: var(--green); }
     .hover-dot.negative { fill: var(--red); }
+    .hover-dot.neutral { fill: var(--blue); }
+
+    /* Market Closed Watermark Tag inside Chart */
+    .market-closed-watermark {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 7px;
+      border-radius: 99px;
+      background: rgba(23, 36, 43, 0.88);
+      border: 1px solid rgba(243, 209, 124, 0.35);
+      color: var(--yellow);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      pointer-events: none;
+      backdrop-filter: blur(4px);
+      z-index: 2;
+    }
+
+    .closed-pulse-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--yellow);
+      display: inline-block;
+      box-shadow: 0 0 5px var(--yellow);
+    }
 
     /* Card Footer Stats */
     .card-footer {
@@ -374,6 +571,11 @@
         </div>
       </div>
       <div class="header-actions">
+        <!-- 24h and 7d View Switcher on top of the page for all charts -->
+        <div class="timeframe-switch" role="group" aria-label="Chart time range switcher">
+          <button type="button" class="timeframe-btn active" data-range="24h" id="tf-btn-24h">24h</button>
+          <button type="button" class="timeframe-btn" data-range="7d" id="tf-btn-7d">7d</button>
+        </div>
         <input type="text" id="search-box" class="search-input" placeholder="Filter tickers… (e.g. NVDA, OIL)" autocomplete="off">
         <button id="refresh-btn" class="btn">
           <span>↻</span> Refresh
@@ -386,6 +588,9 @@
         <span class="pill" id="total-count-pill">22 Tickers</span>
         <span class="pill bullish" id="bullish-count-pill">— Bullish</span>
         <span class="pill bearish" id="bearish-count-pill">— Bearish</span>
+        <span class="pill pill-closed" id="weekend-status-pill" style="display:none;">
+          <span class="closed-dot"></span> Market Closed · Weekend
+        </span>
       </div>
       <div id="last-updated">Loading live market data…</div>
     </div>
@@ -407,9 +612,13 @@
     const totalCountPill = document.querySelector("#total-count-pill");
     const bullishCountPill = document.querySelector("#bullish-count-pill");
     const bearishCountPill = document.querySelector("#bearish-count-pill");
+    const weekendStatusPill = document.querySelector("#weekend-status-pill");
+    const timeframeButtons = document.querySelectorAll(".timeframe-btn");
 
     let allTickerData = {};
+    let allMarketData = {};
     let activeFilter = "";
+    let activeTimeframe = "24h"; // "24h" or "7d"
 
     const TICKER_DEFS = [
       { symbol: "OIL", id: 17, name: "Crude Oil (WTI)", yahoo: "CL=F", asset: "commodities" },
@@ -436,6 +645,44 @@
       { symbol: "HOOD", id: 9272, name: "Robinhood Markets, Inc.", yahoo: "HOOD", asset: "stocks" },
     ];
 
+    /* Weekend & Market Hours Helper (New York Wall Time) */
+    const nyDateFormatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      weekday: "short",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    });
+
+    function getNYParts(date) {
+      return Object.fromEntries(
+        nyDateFormatter.formatToParts(date)
+          .filter(p => p.type !== "literal")
+          .map(p => [p.type, p.value])
+      );
+    }
+
+    function isWeekendNow(date = new Date()) {
+      const parts = getNYParts(date);
+      const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const weekday = weekdays.indexOf(parts.weekday);
+      const hour = Number(parts.hour);
+      const minute = Number(parts.minute || 0);
+
+      // Friday after 16:00 NY
+      if (weekday === 5 && hour >= 16) return true;
+      // All day Saturday
+      if (weekday === 6) return true;
+      // All day Sunday
+      if (weekday === 0) return true;
+      // Monday before 09:30 NY
+      if (weekday === 1 && (hour < 9 || (hour === 9 && minute < 30))) return true;
+      return false;
+    }
+
     function el(tag, className, text) {
       const node = document.createElement(tag);
       if (className) node.className = className;
@@ -459,10 +706,27 @@
       }
     }
 
+    function formatDateShort(isoStr) {
+      if (!isoStr) return "";
+      try {
+        const d = new Date(isoStr);
+        return d.toLocaleDateString([], { month: "short", day: "numeric", timeZone: "UTC" });
+      } catch {
+        return "";
+      }
+    }
+
     function createChart(ticker, item, width = 420, height = 135) {
-      const history = (item && Array.isArray(item.history) && item.history.length > 0)
+      const rawHistory = (item && Array.isArray(item.history) && item.history.length > 0)
         ? item.history
         : (item && item.price ? [{ timestamp: item.price_timestamp || new Date().toISOString(), price: item.price }] : []);
+
+      // Parse and sort points
+      const allPoints = rawHistory.map(h => ({
+        time: new Date(h.timestamp),
+        price: Number(h.price),
+        raw: h
+      })).filter(pt => !isNaN(pt.time.getTime()) && Number.isFinite(pt.price)).sort((a, b) => a.time - b.time);
 
       const isPositive = (item?.change ?? 0) >= 0;
       const statusClass = isPositive ? "positive" : "negative";
@@ -470,6 +734,15 @@
       const container = el("div", "chart-container");
       const tooltip = el("div", "tooltip-float");
       container.append(tooltip);
+
+      // Market Closed Watermark Tag if currently weekend
+      const marketIsClosed = isWeekendNow() || item?.isWeekendClosed || allMarketData?.benchmarks?.isWeekendClosed;
+      if (marketIsClosed) {
+        const closedBadge = el("div", "market-closed-watermark");
+        const dot = el("span", "closed-pulse-dot");
+        closedBadge.append(dot, document.createTextNode(" Market Closed"));
+        container.append(closedBadge);
+      }
 
       const svg = svgEl("svg", {
         viewBox: `0 0 ${width} ${height}`,
@@ -493,7 +766,7 @@
       defs.append(greenGrad, redGrad);
       svg.append(defs);
 
-      if (!history.length) {
+      if (!allPoints.length) {
         svg.append(svgEl("text", {
           x: width / 2,
           y: height / 2,
@@ -505,6 +778,16 @@
         return container;
       }
 
+      // Filter visible points according to activeTimeframe ("24h" or "7d")
+      let visiblePoints = allPoints;
+      if (activeTimeframe === "24h") {
+        const latestMs = allPoints[allPoints.length - 1].time.getTime();
+        const cutoffMs = latestMs - 24 * 60 * 60 * 1000;
+        const candidatePoints = allPoints.filter(p => p.time.getTime() >= cutoffMs);
+        // If data falls on weekend or sparse, ensure at least last active session is visible
+        visiblePoints = candidatePoints.length >= 4 ? candidatePoints : allPoints.slice(-36);
+      }
+
       const paddingLeft = 38;
       const paddingRight = 14;
       const paddingTop = 12;
@@ -512,7 +795,7 @@
       const plotWidth = width - paddingLeft - paddingRight;
       const plotHeight = height - paddingTop - paddingBottom;
 
-      const prices = history.map(h => Number(h.price)).filter(Number.isFinite);
+      const prices = visiblePoints.map(h => h.price);
       const prevClose = Number(item?.previous_close);
       if (Number.isFinite(prevClose)) prices.push(prevClose);
 
@@ -523,7 +806,38 @@
       minP -= padP;
       maxP += padP;
 
-      const getX = (idx, total) => paddingLeft + (total > 1 ? (idx / (total - 1)) * plotWidth : plotWidth / 2);
+      const minT = visiblePoints[0].time.getTime();
+      let maxT = visiblePoints[visiblePoints.length - 1].time.getTime();
+
+      // Detect Weekend Windows in visible data (gap >= 36 hours between consecutive points)
+      const weekendWindows = [];
+      for (let i = 1; i < visiblePoints.length; i++) {
+        const gap = visiblePoints[i].time.getTime() - visiblePoints[i - 1].time.getTime();
+        if (gap >= 36 * 60 * 60 * 1000) {
+          weekendWindows.push({
+            closeTime: visiblePoints[i - 1].time.getTime(),
+            closePrice: visiblePoints[i - 1].price,
+            openTime: visiblePoints[i].time.getTime(),
+            openPrice: visiblePoints[i].price
+          });
+        }
+      }
+
+      // If activeTimeframe is 7d and currently weekend, extend maxT slightly for visible weekend band
+      if (marketIsClosed && (Date.now() - maxT) > 12 * 60 * 60 * 1000 && activeTimeframe === "7d") {
+        const extendedT = Math.min(Date.now(), maxT + 48 * 60 * 60 * 1000);
+        weekendWindows.push({
+          closeTime: maxT,
+          closePrice: visiblePoints[visiblePoints.length - 1].price,
+          openTime: extendedT,
+          openPrice: visiblePoints[visiblePoints.length - 1].price,
+          isCurrentWeekend: true
+        });
+        maxT = extendedT;
+      }
+
+      const timeSpan = maxT - minT || 1;
+      const getX = (t) => paddingLeft + ((t - minT) / timeSpan) * plotWidth;
       const getY = (price) => paddingTop + (1 - (price - minP) / (maxP - minP)) * plotHeight;
 
       // Horizontal grid lines & Y labels (3 levels)
@@ -548,6 +862,56 @@
         svg.append(label);
       }
 
+      // Draw Weekend Bands & Labels for market closed feature
+      for (const w of weekendWindows) {
+        const startX = Math.max(paddingLeft, getX(w.closeTime));
+        const endX = Math.min(width - paddingRight, getX(w.openTime));
+        if (endX > startX) {
+          // Shaded weekend closed rectangle
+          const rect = svgEl("rect", {
+            x: startX,
+            y: paddingTop,
+            width: endX - startX,
+            height: plotHeight,
+            class: "weekend-closed-band"
+          });
+          svg.append(rect);
+
+          // Close boundary line
+          svg.append(svgEl("line", {
+            x1: startX,
+            x2: startX,
+            y1: paddingTop,
+            y2: paddingTop + plotHeight,
+            class: "weekend-boundary"
+          }));
+
+          // Open boundary line (if before right edge)
+          if (endX < width - paddingRight) {
+            svg.append(svgEl("line", {
+              x1: endX,
+              x2: endX,
+              y1: paddingTop,
+              y2: paddingTop + plotHeight,
+              class: "weekend-boundary"
+            }));
+          }
+
+          // Centered "MARKET CLOSED" label
+          if (endX - startX > 35) {
+            const labelX = (startX + endX) / 2;
+            const wLabel = svgEl("text", {
+              x: labelX,
+              y: paddingTop + 13,
+              "text-anchor": "middle",
+              class: "weekend-label"
+            });
+            wLabel.textContent = "MARKET CLOSED";
+            svg.append(wLabel);
+          }
+        }
+      }
+
       // Previous close reference line
       if (Number.isFinite(prevClose) && prevClose >= minP && prevClose <= maxP) {
         const prevY = getY(prevClose);
@@ -560,34 +924,67 @@
         }));
       }
 
-      // Path coordinates
-      const points = history.map((pt, idx) => ({
-        x: getX(idx, history.length),
+      // Generate points with coordinates
+      const coords = visiblePoints.map((pt) => ({
+        x: getX(pt.time.getTime()),
         y: getY(pt.price),
         raw: pt
       }));
 
-      // Build path string
-      let dPath = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
-      for (let i = 1; i < points.length; i++) {
-        dPath += ` L ${points[i].x.toFixed(1)} ${points[i].y.toFixed(1)}`;
-      }
+      // Build path segments, inserting dotted carry line over weekend gaps
+      let currentPath = `M ${coords[0].x.toFixed(1)} ${coords[0].y.toFixed(1)}`;
+      const allPaths = [];
 
-      // Area fill path
-      const dArea = `${dPath} L ${points[points.length - 1].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} L ${points[0].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} Z`;
+      for (let i = 1; i < coords.length; i++) {
+        const prevPt = coords[i - 1];
+        const pt = coords[i];
+        const gap = pt.raw.time.getTime() - prevPt.raw.time.getTime();
+
+        if (gap >= 36 * 60 * 60 * 1000) {
+          // End solid path at previous point
+          allPaths.push(currentPath);
+
+          // Add horizontal weekend carry line (dotted) from Friday close to Monday open
+          const carryY = getY(prevPt.raw.price);
+          const carryLine = svgEl("line", {
+            x1: prevPt.x.toFixed(1),
+            x2: pt.x.toFixed(1),
+            y1: carryY.toFixed(1),
+            y2: carryY.toFixed(1),
+            class: `weekend-carry-line ${statusClass}`
+          });
+          svg.append(carryLine);
+
+          // Start new solid segment from next point
+          currentPath = `M ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+        } else {
+          currentPath += ` L ${pt.x.toFixed(1)} ${pt.y.toFixed(1)}`;
+        }
+      }
+      allPaths.push(currentPath);
+
+      // Render Area Fill
+      let dArea = `M ${coords[0].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} L ${coords[0].x.toFixed(1)} ${coords[0].y.toFixed(1)}`;
+      for (let i = 1; i < coords.length; i++) {
+        dArea += ` L ${coords[i].x.toFixed(1)} ${coords[i].y.toFixed(1)}`;
+      }
+      dArea += ` L ${coords[coords.length - 1].x.toFixed(1)} ${(paddingTop + plotHeight).toFixed(1)} Z`;
 
       const areaEl = svgEl("path", {
         d: dArea,
         fill: isPositive ? `url(#green-grad-${ticker.symbol})` : `url(#red-grad-${ticker.symbol})`,
-        opacity: "0.4"
+        class: "chart-area"
       });
+      svg.append(areaEl);
 
-      const lineEl = svgEl("path", {
-        d: dPath,
-        class: `chart-line ${statusClass}`
-      });
-
-      svg.append(areaEl, lineEl);
+      // Render solid path lines
+      for (const pStr of allPaths) {
+        const lineEl = svgEl("path", {
+          d: pStr,
+          class: `chart-line ${statusClass}`
+        });
+        svg.append(lineEl);
+      }
 
       // Interactive hover elements
       const crosshair = svgEl("line", {
@@ -614,9 +1011,9 @@
         }
 
         // Find nearest point
-        let nearest = points[0];
+        let nearest = coords[0];
         let minDist = Infinity;
-        for (const pt of points) {
+        for (const pt of coords) {
           const dist = Math.abs(pt.x - normalizedX);
           if (dist < minDist) {
             minDist = dist;
@@ -632,7 +1029,8 @@
         hoverDot.setAttribute("cy", nearest.y);
         hoverDot.style.display = "block";
 
-        tooltip.textContent = `$${Number(nearest.raw.price).toFixed(2)} · ${formatTime(nearest.raw.timestamp)}`;
+        const dateStr = activeTimeframe === "7d" ? formatDateShort(nearest.raw.time) + " " : "";
+        tooltip.textContent = `$${Number(nearest.raw.price).toFixed(2)} · ${dateStr}${formatTime(nearest.raw.time)}`;
         tooltip.style.left = `${(nearest.x / width) * 100}%`;
         tooltip.style.top = `${(nearest.y / height) * 100}%`;
         tooltip.style.display = "block";
@@ -656,10 +1054,16 @@
       let visibleCount = 0;
 
       const filterLower = activeFilter.trim().toLowerCase();
+      const isWeekendGlobal = isWeekendNow() || allMarketData?.benchmarks?.isWeekendClosed;
+
+      if (weekendStatusPill) {
+        weekendStatusPill.style.display = isWeekendGlobal ? "inline-flex" : "none";
+      }
 
       for (const def of TICKER_DEFS) {
         const symKey = def.symbol.toLowerCase();
         const data = allTickerData[symKey] || {};
+        const marketSnapshot = (allMarketData.tickers && (allMarketData.tickers[def.symbol] || allMarketData.tickers[def.symbol.toUpperCase()])) || {};
 
         const matches = !filterLower ||
           def.symbol.toLowerCase().includes(filterLower) ||
@@ -680,18 +1084,74 @@
         const card = el("article", "card");
         card.setAttribute("id", `card-${def.symbol.toLowerCase()}`);
 
-        // Card Header
+        // Card Header: Left (Title), Middle (News Sentiment + Technicals), Right (Price)
         const header = el("div", "card-header");
 
+        // 1. Left: Title & Symbol Group
         const titleGroup = el("div", "card-title-group");
         const symbolRow = el("div", "ticker-symbol-row");
         symbolRow.append(el("span", "ticker-symbol", def.symbol));
         symbolRow.append(el("span", "instrument-badge", `#${def.id}`));
         symbolRow.append(el("span", `pill ${isBullish ? "bullish" : isBearish ? "bearish" : ""}`, def.asset === "commodities" ? "OIL" : "STOCK"));
 
+        if (isWeekendGlobal) {
+          const closedPill = el("span", "pill pill-closed");
+          closedPill.innerHTML = '<span class="closed-dot"></span> Weekend';
+          symbolRow.append(closedPill);
+        }
+
         const nameEl = el("div", "ticker-name", def.name);
         titleGroup.append(symbolRow, nameEl);
 
+        // 2. Middle: News Sentiment General Direction + 24h Content & Technicals
+        const centerMatrix = el("div", "card-center-matrix");
+        centerMatrix.title = "24h News Sentiment & Technical Indicators from Trading Dashboard";
+
+        // Sentiment metrics
+        const sent = marketSnapshot.sentiment || {};
+        const sentDir = (sent.dominantDirection || data.price_change_sentiment || "neutral").toUpperCase();
+        const sentScore = sent.netSentimentScore !== undefined
+          ? (sent.netSentimentScore >= 0 ? `+${sent.netSentimentScore.toFixed(2)}` : sent.netSentimentScore.toFixed(2))
+          : (isBullish ? "+0.50" : isBearish ? "-0.50" : "0.00");
+        const sentCounts = sent.recent24h
+          ? `(${sent.recent24h.bullish || 0}B/${sent.recent24h.bearish || 0}b)`
+          : (sent.totalStories ? `(${sent.totalStories}s)` : "");
+        const sentBadgeClass = sentDir === "BULLISH" ? "bullish" : (sentDir === "BEARISH" ? "bearish" : "neutral");
+
+        const sentRow = el("div", "center-matrix-row");
+        sentRow.append(el("span", `matrix-sent-badge ${sentBadgeClass}`, sentDir));
+        sentRow.append(el("span", "matrix-sent-score mono", sentScore));
+        if (sentCounts) {
+          sentRow.append(el("span", "matrix-sent-counts mono", sentCounts));
+        }
+
+        // Technicals metrics (Technicals column from Market Matrix)
+        const tech = marketSnapshot.technicals || {};
+        const trendIcon = tech.trendAlignment === "bullish" ? "🟢" : (tech.trendAlignment === "bearish" ? "🔴" : "⚪");
+        const htfTrendIcon = tech.htfTrendAlignment === "bullish" ? "🟢" : (tech.htfTrendAlignment === "bearish" ? "🔴" : "⚪");
+        const rsiVal = tech.rsi14 ? Number(tech.rsi14).toFixed(0) : (data.rsi ? Number(data.rsi).toFixed(0) : "--");
+        const rvolVal = tech.rvol ? `${Number(tech.rvol).toFixed(1)}x` : "--";
+
+        const techRow = el("div", "center-matrix-row");
+        const trendEl = el("span", "matrix-tech-trend", `${trendIcon}/${htfTrendIcon}`);
+        trendEl.title = `Trend (15m: ${tech.trendAlignment || 'n/a'} / 4h: ${tech.htfTrendAlignment || 'n/a'})`;
+        techRow.append(trendEl);
+
+        const rsiPill = el("span", "matrix-tech-pill");
+        rsiPill.title = "RSI (14)";
+        rsiPill.innerHTML = `RSI:<b>${rsiVal}</b>`;
+        techRow.append(rsiPill);
+
+        if (rvolVal !== "--") {
+          const rvolPill = el("span", "matrix-tech-pill");
+          rvolPill.title = "Relative Volume";
+          rvolPill.innerHTML = `<b>${rvolVal}</b>`;
+          techRow.append(rvolPill);
+        }
+
+        centerMatrix.append(sentRow, techRow);
+
+        // 3. Right: Price & Change Group
         const priceGroup = el("div", "card-price-group");
         const curPrice = Number(data.price);
         const priceStr = Number.isFinite(curPrice) ? `$${curPrice.toFixed(2)}` : "—";
@@ -705,10 +1165,12 @@
         const changeEl = el("div", changeClass, changeStr);
 
         priceGroup.append(priceEl, changeEl);
-        header.append(titleGroup, priceGroup);
+
+        // Assemble Header
+        header.append(titleGroup, centerMatrix, priceGroup);
         card.append(header);
 
-        // Chart
+        // Chart (supports activeTimeframe 24h / 7d and market closed)
         const chartNode = createChart(def, data);
         card.append(chartNode);
 
@@ -717,14 +1179,23 @@
         const prevClose = Number(data.previous_close);
         const prevCloseStr = Number.isFinite(prevClose) ? `$${prevClose.toFixed(2)}` : "—";
 
-        const prices = (data.history || []).map(h => Number(h.price)).filter(Number.isFinite);
+        // Calculate low/high based on current timeframe
+        const hist = data.history || [];
+        let rangePoints = hist;
+        if (activeTimeframe === "24h" && hist.length) {
+          const maxT = new Date(hist[hist.length - 1].timestamp).getTime();
+          const cutoff = maxT - 24 * 60 * 60 * 1000;
+          const candidate = hist.filter(h => new Date(h.timestamp).getTime() >= cutoff);
+          rangePoints = candidate.length >= 4 ? candidate : hist.slice(-36);
+        }
+
+        const prices = rangePoints.map(h => Number(h.price)).filter(Number.isFinite);
         const dayLow = prices.length ? Math.min(...prices) : (Number.isFinite(curPrice) ? curPrice : null);
         const dayHigh = prices.length ? Math.max(...prices) : (Number.isFinite(curPrice) ? curPrice : null);
-
         const lowHighStr = (dayLow !== null && dayHigh !== null) ? `$${dayLow.toFixed(2)} – $${dayHigh.toFixed(2)}` : "—";
 
         const statsLeft = el("span");
-        statsLeft.innerHTML = `Range: <b>${lowHighStr}</b>`;
+        statsLeft.innerHTML = `${activeTimeframe} Range: <b>${lowHighStr}</b>`;
 
         const statsRight = el("span");
         statsRight.innerHTML = `Prev: <b>${prevCloseStr}</b> · <span>${formatTime(data.price_timestamp)}</span>`;
@@ -746,34 +1217,55 @@
 
     async function loadData() {
       refreshBtn.disabled = true;
-      lastUpdatedEl.textContent = "Fetching latest market quotes…";
+      lastUpdatedEl.textContent = "Fetching latest market quotes & sentiment…";
 
       try {
-        // Attempt to fetch index from site/data/mass/index.json
-        const idxRes = await fetch(`data/mass/index.json?t=${Date.now()}`, { cache: "no-store" });
-        if (!idxRes.ok) throw new Error(`Data index returned status ${idxRes.status}`);
-        const idxJson = await idxRes.json();
-        const files = Array.isArray(idxJson.files) ? idxJson.files : [];
-        if (!files.length) throw new Error("No data files in index");
+        // Parallel fetch of latest mass-monitor file and market.json
+        const massPromise = (async () => {
+          const idxRes = await fetch(`data/mass/index.json?t=${Date.now()}`, { cache: "no-store" });
+          if (!idxRes.ok) throw new Error(`Data index returned status ${idxRes.status}`);
+          const idxJson = await idxRes.json();
+          const files = Array.isArray(idxJson.files) ? idxJson.files : [];
+          if (!files.length) throw new Error("No data files in index");
 
-        const latestFile = files[files.length - 1];
-        const dataRes = await fetch(`data/mass/${encodeURIComponent(latestFile)}?t=${Date.now()}`, { cache: "no-store" });
-        if (!dataRes.ok) throw new Error(`Failed to load ${latestFile}`);
-        const text = await dataRes.text();
+          const latestFile = files[files.length - 1];
+          const dataRes = await fetch(`data/mass/${encodeURIComponent(latestFile)}?t=${Date.now()}`, { cache: "no-store" });
+          if (!dataRes.ok) throw new Error(`Failed to load ${latestFile}`);
+          const text = await dataRes.text();
+          const lines = text.split(/\r?\n/).filter(Boolean);
+          if (!lines.length) throw new Error("Empty data file");
+          const record = JSON.parse(lines[lines.length - 1]);
+          return { record, filesCount: files.length };
+        })();
 
-        const lines = text.split(/\r?\n/).filter(Boolean);
-        if (!lines.length) throw new Error("Empty data file");
+        const marketPromise = (async () => {
+          // 1. Try local site/data/market.json
+          try {
+            const mRes = await fetch(`data/market.json?t=${Date.now()}`, { cache: "no-store" });
+            if (mRes.ok) return await mRes.json();
+          } catch (e) {
+            console.warn("Local data/market.json fetch failed, trying trading-dashboard remote...", e);
+          }
+          // 2. Try remote trader-dashboard GitHub Pages
+          try {
+            const rRes = await fetch(`https://knightkalman.github.io/trader-dashboard/data/market.json?t=${Date.now()}`, { cache: "no-store" });
+            if (rRes.ok) return await rRes.json();
+          } catch (re) {
+            console.warn("Remote trader-dashboard market.json fetch failed...", re);
+          }
+          return {};
+        })();
 
-        // Parse latest record
-        const record = JSON.parse(lines[lines.length - 1]);
-        allTickerData = record.prices || {};
+        const [massResult, marketResult] = await Promise.all([massPromise, marketPromise]);
+
+        allTickerData = massResult.record.prices || {};
+        allMarketData = marketResult || {};
 
         renderCards();
-        lastUpdatedEl.textContent = `Updated ${formatTime(record.collected_at)} (${files.length} archive days)`;
+        lastUpdatedEl.textContent = `Updated ${formatTime(massResult.record.collected_at)} (${massResult.filesCount} archive days)`;
       } catch (err) {
-        console.warn("Could not load remote index, attempting direct fallback file...", err);
+        console.warn("Could not load via index, attempting direct fallback...", err);
         try {
-          // Fallback to data/mass/latest.jsonl or embedded current day
           const today = new Date().toISOString().slice(0, 10);
           const directRes = await fetch(`data/mass/${today}.jsonl?t=${Date.now()}`, { cache: "no-store" });
           if (!directRes.ok) throw new Error("Direct fallback unavailable");
@@ -781,6 +1273,13 @@
           const lines = text.split(/\r?\n/).filter(Boolean);
           const record = JSON.parse(lines[lines.length - 1]);
           allTickerData = record.prices || {};
+
+          // Try fetching market.json
+          try {
+            const mRes = await fetch(`data/market.json?t=${Date.now()}`, { cache: "no-store" });
+            if (mRes.ok) allMarketData = await mRes.json();
+          } catch { /* optional */ }
+
           renderCards();
           lastUpdatedEl.textContent = `Updated ${formatTime(record.collected_at)} (direct fallback)`;
         } catch (innerErr) {
@@ -791,6 +1290,16 @@
         refreshBtn.disabled = false;
       }
     }
+
+    // Timeframe button switches (24h / 7d)
+    timeframeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        timeframeButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeTimeframe = btn.dataset.range;
+        renderCards();
+      });
+    });
 
     searchBox.addEventListener("input", (e) => {
       activeFilter = e.target.value;

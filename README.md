@@ -63,9 +63,19 @@ In the `trading-agent` orchestrator ecosystem, market data is populated across t
 
 ---
 
-## Datapoint Requirements for the Multi-Ticker Graph
+## Datapoint Requirements & Features
 
-To render the clean, responsive charts across all 22 tickers on a single page, the following core datapoints are required and retained:
+### Core Dashboard Capabilities:
+1. **Interactive 24h / 7d Timeframe Switcher**: Located in the top header, switching all 22 sparkline charts dynamically between the last 24 hours of trading and full 7-day trend history.
+2. **"Market Closed" Weekend Intelligence**:
+   - Automatically detects New York equity market close (Friday 16:00 to Monday 09:30 NY) and commodities schedules.
+   - Highlights weekend non-trading intervals with shaded vertical bands (`.weekend-closed-band`), dashed boundary lines, and centered `"MARKET CLOSED"` labels.
+   - Preserves continuous trend visualization using dotted weekend-carry lines bridging Friday close to the next trading session.
+   - Renders a live `"Market Closed · Weekend"` status pill in the meta bar and a discreet watermark badge on charts when markets are closed.
+3. **Market Matrix News Sentiment & Technicals Integration**:
+   - Embedded in the header space between the ticker name and quote price for each card.
+   - **24h News Sentiment**: General direction pill (`BULLISH` / `BEARISH` / `NEUTRAL` / `MIXED`), net sentiment score, and bullish/bearish story counts `(14B/10b)` from `trading-dashboard`.
+   - **Technicals Column Indicators**: Dual timeframe trend icons (15m/4h `🟢/🔴`), RSI14 pill, and RVOL multiplier.
 
 ### Required Datapoints (Included):
 1. **`symbol`**: Ticker symbol (e.g. `NVDA`, `OIL`, `AMD`).

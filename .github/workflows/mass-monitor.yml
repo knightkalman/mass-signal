@@ -37,14 +37,17 @@ jobs:
           python mass_monitor.py \
             --once \
             --output "$output_path" \
+            --range 7d \
+            --interval 15m \
             --state-db data/mass_monitor_state.sqlite3
           echo "MASS_OUTPUT_PATH=$output_path" >> "$GITHUB_ENV"
+          curl -sSf https://knightkalman.github.io/trader-dashboard/data/market.json -o data/market.json || true
 
       - name: Save collected data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f data/mass/ data/mass_monitor_state.sqlite3
+          git add -f data/mass/ data/mass_monitor_state.sqlite3 data/market.json
           if ! git diff --cached --quiet; then
             git commit -m "Update mass monitor data (22 tickers)"
             git push
@@ -70,6 +73,11 @@ jobs:
         run: |
           mkdir -p site/data/mass
           cp data/mass/*.jsonl site/data/mass/
+          if [ -f data/market.json ]; then
+            cp data/market.json site/data/market.json
+          else
+            curl -sSf https://knightkalman.github.io/trader-dashboard/data/market.json -o site/data/market.json || true
+          fi
           python - <<'PY'
           import json
           from pathlib import Path

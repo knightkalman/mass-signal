@@ -130,3 +130,40 @@ class MassMonitorTests(TestCase):
             cur = conn.execute("SELECT COUNT(*) FROM runs")
             self.assertEqual(cur.fetchone()[0], 1)
             conn.close()
+
+    def test_site_index_html_has_timeframe_switch_and_market_closed(self):
+        index_html = Path("site/index.html").read_text(encoding="utf-8")
+        # Timeframe switch
+        self.assertIn('data-range="24h"', index_html)
+        self.assertIn('data-range="7d"', index_html)
+        self.assertIn('timeframe-switch', index_html)
+
+        # Market closed weekend features
+        self.assertIn('weekend-closed-band', index_html)
+        self.assertIn('weekend-boundary', index_html)
+        self.assertIn('weekend-carry-line', index_html)
+        self.assertIn('market-closed-watermark', index_html)
+        self.assertIn('MARKET CLOSED', index_html)
+
+        # Center matrix: news sentiment & technicals in empty space between ticker name and price
+        self.assertIn('card-center-matrix', index_html)
+        self.assertIn('matrix-sent-badge', index_html)
+        self.assertIn('matrix-sent-score', index_html)
+        self.assertIn('matrix-tech-trend', index_html)
+        self.assertIn('matrix-tech-pill', index_html)
+
+    def test_market_json_contains_all_tickers_with_sentiment_and_technicals(self):
+        market_file = Path("site/data/market.json")
+        self.assertTrue(market_file.is_file())
+        data = json.loads(market_file.read_text(encoding="utf-8"))
+        tickers = data.get("tickers", {})
+        self.assertEqual(len(tickers), 22)
+
+        for sym in ["OIL", "NVDA", "AMD", "PLTR", "AMZN", "META"]:
+            self.assertIn(sym, tickers)
+            t = tickers[sym]
+            self.assertIn("sentiment", t)
+            self.assertIn("dominantDirection", t["sentiment"])
+            self.assertIn("technicals", t)
+            self.assertIn("trendAlignment", t["technicals"])
+            self.assertIn("rsi14", t["technicals"])
