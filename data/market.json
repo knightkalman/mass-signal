@@ -1,85 +1,85 @@
 {
   "benchmarks": {
     "brent": {
-      "changePercent": -14.0088,
-      "price": 125.53,
+      "changePercent": -3.5909,
+      "price": 86.72,
       "sentiment": "bearish",
       "symbol": "BZ=F"
     },
     "eventRiskFlag": "MEDIUM",
-    "isWeekendClosed": true,
-    "priceDivergencePct": 0.3067,
+    "isWeekendClosed": false,
+    "priceDivergencePct": 0.405,
     "primary": {
-      "changePercent": -14.0088,
-      "price": 125.53,
+      "changePercent": -3.7885,
+      "price": 80.25,
       "sentiment": "bearish",
-      "symbol": "NVDA"
+      "symbol": "CL=F"
     },
     "secondary": {
-      "changePercent": -14.0088,
-      "price": 125.53,
+      "changePercent": -3.5909,
+      "price": 86.72,
       "sentiment": "bearish",
-      "symbol": "NVDA"
+      "symbol": "BZ=F"
     },
     "wti": {
-      "changePercent": -14.0088,
-      "price": 125.53,
+      "changePercent": -3.7885,
+      "price": 80.25,
       "sentiment": "bearish",
       "symbol": "CL=F"
     }
   },
-  "capturedAt": "2026-11-22T23:51:39Z",
-  "defaultSelectedTicker": "NVDA",
+  "capturedAt": "2026-11-23T22:13:00Z",
+  "defaultSelectedTicker": "OIL",
   "instrument": {
-    "assetClass": "stocks",
-    "instrumentId": 1137,
-    "name": "NVIDIA Corporation",
-    "symbol": "NVDA"
+    "assetClass": "commodities",
+    "instrumentId": 17,
+    "name": "Oil (Non Expiry)",
+    "symbol": "OIL"
   },
   "quote": {
-    "ask": 125.93,
-    "bid": 125.9,
-    "dailyChangePercent": -13.745,
-    "mid": 125.915,
-    "monthlyChangePercent": -44.866,
+    "ask": 79.94,
+    "bid": 79.91,
+    "dailyChangePercent": -4.4084,
+    "mid": 79.925,
+    "monthlyChangePercent": -21.2836,
     "spread": 0.03,
-    "spreadPct": 0.0238,
-    "weeklyChangePercent": -22.6804
+    "spreadPct": 0.0375,
+    "weeklyChangePercent": -4.4084
   },
   "regime": {
     "direction": "bearish",
-    "durationHours": 5.55,
-    "netChangePercent": -8.9449
+    "durationHours": 9.15,
+    "netChangePercent": -2.3128
   },
   "sentiment": {
     "assessmentProvider": "copilot_llm",
     "dominantDirection": "bearish",
     "isFallbackSentiment": false,
-    "netSentimentScore": -0.2661,
+    "netSentimentScore": -0.2593,
     "recent24h": {
-      "bearish": 106,
-      "bullish": 52,
-      "mixed": 12,
-      "neutral": 103,
-      "total": 303,
-      "unclear": 11
+      "bearish": 14,
+      "bullish": 7,
+      "mixed": 2,
+      "neutral": 4,
+      "total": 30,
+      "unclear": 0
     },
-    "totalStories": 1208
+    "totalStories": 30
   },
-  "snapshotId": "snap_nvda_1137_20261122T235139Z",
+  "snapshotId": "snap_oil_17_20261123T221300Z",
   "technicals": {
-    "adx14": 49.34,
-    "atr14": 3.2463,
-    "atrPct": 2.5781,
-    "ema20": 132.4584,
-    "ema50": 136.8914,
+    "adx14": 33.91,
+    "atr14": 0.6394,
+    "atrPct": 0.8,
+    "ema20": 80.3015,
+    "ema50": 80.987,
     "htfTimeframe": "4h",
     "htfTrendAlignment": "bearish",
-    "nearestResistance": 130.7844,
-    "nearestSupport": 125.53,
-    "rsi14": 22.82,
-    "rvol": 2.71,
-    "sma200": 146.7429,
+    "nearestResistance": 80.8841,
+    "nearestSupport": 79.91,
+    "rsi14": 39.89,
+    "rvol": 3.0,
+    "sma200": 82.8726,
     "timeframe": "15m",
     "trendAlignment": "bearish"
   },
@@ -87,34 +87,34 @@
     "AMD": {
       "benchmarks": {
         "brent": {
-          "changePercent": -13.2464,
-          "price": 424.39,
-          "sentiment": "bearish",
+          "changePercent": 6.8498,
+          "price": 453.46,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
-        "eventRiskFlag": "HIGH",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.1909,
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.4333,
         "primary": {
-          "changePercent": -13.2464,
-          "price": 424.39,
-          "sentiment": "bearish",
+          "changePercent": 6.8498,
+          "price": 453.46,
+          "sentiment": "bullish",
           "symbol": "AMD"
         },
         "secondary": {
-          "changePercent": -13.2464,
-          "price": 424.39,
-          "sentiment": "bearish",
+          "changePercent": 6.8498,
+          "price": 453.46,
+          "sentiment": "bullish",
           "symbol": "AMD"
         },
         "wti": {
-          "changePercent": -13.2464,
-          "price": 424.39,
-          "sentiment": "bearish",
+          "changePercent": 6.8498,
+          "price": 453.46,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1832,
@@ -122,95 +122,95 @@
         "symbol": "AMD"
       },
       "quote": {
-        "ask": 423.61,
-        "bid": 423.55,
-        "dailyChangePercent": -13.412,
-        "mid": 423.58,
-        "monthlyChangePercent": -30.7604,
-        "spread": 0.06,
-        "spreadPct": 0.0142,
-        "weeklyChangePercent": -20.6868
+        "ask": 451.63,
+        "bid": 451.36,
+        "dailyChangePercent": -0.4631,
+        "mid": 451.495,
+        "monthlyChangePercent": -26.2194,
+        "spread": 0.27,
+        "spreadPct": 0.0598,
+        "weeklyChangePercent": 6.355
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -5.733
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -1.9641
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
-        "dominantDirection": "bearish",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.458,
+        "netSentimentScore": 0.1644,
         "recent24h": {
-          "bearish": 31,
-          "bullish": 13,
-          "mixed": 4,
-          "neutral": 5,
-          "total": 53,
-          "unclear": 0
+          "bearish": 20,
+          "bullish": 32,
+          "mixed": 5,
+          "neutral": 14,
+          "total": 167,
+          "unclear": 2
         },
-        "totalStories": 345
+        "totalStories": 167
       },
-      "snapshotId": "snap_amd_1832_20261122T235139Z",
+      "snapshotId": "snap_amd_1832_20261123T221300Z",
       "technicals": {
-        "adx14": 33.78,
-        "atr14": 7.8093,
-        "atrPct": 1.8436,
-        "ema20": 433.4065,
-        "ema50": 446.525,
+        "adx14": 16.04,
+        "atr14": 5.397,
+        "atrPct": 1.1954,
+        "ema20": 452.3019,
+        "ema50": 451.8944,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 435.294,
-        "nearestSupport": 421.9377,
-        "rsi14": 32.93,
-        "rvol": 2.82,
-        "sma200": 495.1752,
+        "nearestResistance": 459.5905,
+        "nearestSupport": 445.66,
+        "rsi14": 48.03,
+        "rvol": 0.8,
+        "sma200": 458.8925,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.9194,
-        "direction": "sellShort",
+        "convictionScore": 0.9041,
+        "direction": "buy",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 443.07,
-        "suggestedTakeProfitRate": 384.5
+        "suggestedStopLossRate": 438.14,
+        "suggestedTakeProfitRate": 478.62
       }
     },
     "AMZN": {
       "benchmarks": {
         "brent": {
-          "changePercent": -4.0992,
-          "price": 246.82,
-          "sentiment": "bearish",
+          "changePercent": 3.4722,
+          "price": 255.39,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.2087,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.3367,
         "primary": {
-          "changePercent": -4.0992,
-          "price": 246.82,
-          "sentiment": "bearish",
+          "changePercent": 3.4722,
+          "price": 255.39,
+          "sentiment": "bullish",
           "symbol": "AMZN"
         },
         "secondary": {
-          "changePercent": -4.0992,
-          "price": 246.82,
-          "sentiment": "bearish",
+          "changePercent": 3.4722,
+          "price": 255.39,
+          "sentiment": "bullish",
           "symbol": "AMZN"
         },
         "wti": {
-          "changePercent": -4.0992,
-          "price": 246.82,
-          "sentiment": "bearish",
+          "changePercent": 3.4722,
+          "price": 255.39,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:01Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1005,
@@ -218,95 +218,95 @@
         "symbol": "AMZN"
       },
       "quote": {
-        "ask": 247.35,
-        "bid": 247.32,
-        "dailyChangePercent": -3.8991,
-        "mid": 247.335,
-        "monthlyChangePercent": -0.7285,
-        "spread": 0.03,
-        "spreadPct": 0.0121,
-        "weeklyChangePercent": -7.2471
+        "ask": 256.5,
+        "bid": 256.0,
+        "dailyChangePercent": 0.2389,
+        "mid": 256.25,
+        "monthlyChangePercent": 2.7493,
+        "spread": 0.5,
+        "spreadPct": 0.1949,
+        "weeklyChangePercent": 3.7193
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.57,
-        "netChangePercent": -3.3348
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -0.6883
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": 0.0694,
+        "netSentimentScore": 0.0,
         "recent24h": {
-          "bearish": 10,
-          "bullish": 13,
-          "mixed": 0,
-          "neutral": 28,
-          "total": 51,
-          "unclear": 0
+          "bearish": 11,
+          "bullish": 11,
+          "mixed": 3,
+          "neutral": 30,
+          "total": 109,
+          "unclear": 1
         },
-        "totalStories": 245
+        "totalStories": 109
       },
-      "snapshotId": "snap_amzn_1005_20261122T235139Z",
+      "snapshotId": "snap_amzn_1005_20261123T221301Z",
       "technicals": {
-        "adx14": 28.23,
-        "atr14": 2.5287,
-        "atrPct": 1.0224,
-        "ema20": 249.4381,
-        "ema50": 251.7048,
+        "adx14": 11.19,
+        "atr14": 2.05,
+        "atrPct": 0.8,
+        "ema20": 256.3775,
+        "ema50": 256.1878,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 251.1281,
-        "nearestSupport": 246.255,
-        "rsi14": 37.73,
-        "rvol": 3.0,
-        "sma200": 261.7009,
+        "nearestResistance": 259.325,
+        "nearestSupport": 254.805,
+        "rsi14": 47.71,
+        "rvol": 0.8,
+        "sma200": 255.3886,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
+        "convictionScore": 0.901,
+        "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
+        "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 253.64,
-        "suggestedTakeProfitRate": 234.68
+        "suggestedStopLossRate": 251.38,
+        "suggestedTakeProfitRate": 266.75
       }
     },
     "ARM": {
       "benchmarks": {
         "brent": {
-          "changePercent": -14.0938,
-          "price": 152.2,
-          "sentiment": "bearish",
+          "changePercent": 16.0775,
+          "price": 176.67,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.1905,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.7302,
         "primary": {
-          "changePercent": -14.0938,
-          "price": 152.2,
-          "sentiment": "bearish",
+          "changePercent": 16.0775,
+          "price": 176.67,
+          "sentiment": "bullish",
           "symbol": "ARM"
         },
         "secondary": {
-          "changePercent": -14.0938,
-          "price": 152.2,
-          "sentiment": "bearish",
+          "changePercent": 16.0775,
+          "price": 176.67,
+          "sentiment": "bullish",
           "symbol": "ARM"
         },
         "wti": {
-          "changePercent": -14.0938,
-          "price": 152.2,
-          "sentiment": "bearish",
+          "changePercent": 16.0775,
+          "price": 176.67,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1365,
@@ -314,95 +314,95 @@
         "symbol": "ARM"
       },
       "quote": {
-        "ask": 151.95,
-        "bid": 151.87,
-        "dailyChangePercent": -14.2575,
-        "mid": 151.91,
-        "monthlyChangePercent": -47.5558,
-        "spread": 0.08,
-        "spreadPct": 0.0526,
-        "weeklyChangePercent": -20.2698
+        "ask": 178.32,
+        "bid": 177.6,
+        "dailyChangePercent": 0.5264,
+        "mid": 177.96,
+        "monthlyChangePercent": -38.6867,
+        "spread": 0.72,
+        "spreadPct": 0.4038,
+        "weeklyChangePercent": 16.6886
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.53,
-        "netChangePercent": -6.0929
+        "direction": "bullish",
+        "durationHours": 5.55,
+        "netChangePercent": -1.7736
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0783,
+        "netSentimentScore": 0.3833,
         "recent24h": {
-          "bearish": 4,
-          "bullish": 2,
+          "bearish": 5,
+          "bullish": 28,
           "mixed": 0,
-          "neutral": 24,
-          "total": 30,
+          "neutral": 27,
+          "total": 103,
           "unclear": 0
         },
-        "totalStories": 115
+        "totalStories": 103
       },
-      "snapshotId": "snap_arm_1365_20261122T235139Z",
+      "snapshotId": "snap_arm_1365_20261123T221300Z",
       "technicals": {
-        "adx14": 37.74,
-        "atr14": 2.4687,
-        "atrPct": 1.6251,
-        "ema20": 156.7536,
-        "ema50": 161.7583,
+        "adx14": 20.49,
+        "atr14": 1.7513,
+        "atrPct": 0.9841,
+        "ema20": 176.5452,
+        "ema50": 173.4969,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 155.6131,
-        "nearestSupport": 150.4,
-        "rsi14": 27.25,
-        "rvol": 3.0,
-        "sma200": 176.7106,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 180.5869,
+        "nearestSupport": 175.3331,
+        "rsi14": 59.02,
+        "rvol": 0.8,
+        "sma200": 168.995,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.9122,
-        "direction": "sellShort",
+        "convictionScore": 0.8856,
+        "direction": "buy",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 158.04,
-        "suggestedTakeProfitRate": 139.53
+        "suggestedStopLossRate": 173.94,
+        "suggestedTakeProfitRate": 187.08
       }
     },
     "ASML": {
       "benchmarks": {
         "brent": {
-          "changePercent": -6.6347,
-          "price": 1266.22,
-          "sentiment": "bearish",
+          "changePercent": 9.2843,
+          "price": 1383.78,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.1568,
+        "eventRiskFlag": "HIGH",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.2992,
         "primary": {
-          "changePercent": -6.6347,
-          "price": 1266.22,
-          "sentiment": "bearish",
+          "changePercent": 9.2843,
+          "price": 1383.78,
+          "sentiment": "bullish",
           "symbol": "ASML"
         },
         "secondary": {
-          "changePercent": -6.6347,
-          "price": 1266.22,
-          "sentiment": "bearish",
+          "changePercent": 9.2843,
+          "price": 1383.78,
+          "sentiment": "bullish",
           "symbol": "ASML"
         },
         "wti": {
-          "changePercent": -6.6347,
-          "price": 1266.22,
-          "sentiment": "bearish",
+          "changePercent": 9.2843,
+          "price": 1383.78,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 4244,
@@ -410,49 +410,241 @@
         "symbol": "ASML"
       },
       "quote": {
-        "ask": 1268.43,
-        "bid": 1267.98,
-        "dailyChangePercent": -6.4883,
-        "mid": 1268.205,
-        "monthlyChangePercent": -29.998,
-        "spread": 0.45,
-        "spreadPct": 0.0355,
-        "weeklyChangePercent": -15.1793
+        "ask": 1388.7,
+        "bid": 1387.14,
+        "dailyChangePercent": 0.2428,
+        "mid": 1387.92,
+        "monthlyChangePercent": -23.4331,
+        "spread": 1.56,
+        "spreadPct": 0.1123,
+        "weeklyChangePercent": 9.5497
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -2.1287
+        "direction": "bullish",
+        "durationHours": 5.49,
+        "netChangePercent": -1.4858
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0556,
+        "netSentimentScore": 0.1875,
         "recent24h": {
-          "bearish": 0,
-          "bullish": 2,
-          "mixed": 2,
-          "neutral": 35,
-          "total": 41,
-          "unclear": 2
+          "bearish": 5,
+          "bullish": 11,
+          "mixed": 0,
+          "neutral": 16,
+          "total": 53,
+          "unclear": 0
         },
-        "totalStories": 108
+        "totalStories": 53
       },
-      "snapshotId": "snap_asml_4244_20261122T235139Z",
+      "snapshotId": "snap_asml_4244_20261123T221300Z",
       "technicals": {
-        "adx14": 40.03,
-        "atr14": 10.2478,
-        "atrPct": 0.8081,
-        "ema20": 1278.5943,
-        "ema50": 1299.1649,
+        "adx14": 10.25,
+        "atr14": 11.1034,
+        "atrPct": 0.8,
+        "ema20": 1381.8699,
+        "ema50": 1370.692,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 1404.575,
+        "nearestSupport": 1373.42,
+        "rsi14": 57.54,
+        "rvol": 0.8,
+        "sma200": 1340.2313,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.9662,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 500.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 1360.94,
+        "suggestedTakeProfitRate": 1444.22
+      }
+    },
+    "CAT": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 7.1682,
+          "price": 547.04,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.5475,
+        "primary": {
+          "changePercent": 7.1682,
+          "price": 547.04,
+          "sentiment": "bullish",
+          "symbol": "CAT"
+        },
+        "secondary": {
+          "changePercent": 7.1682,
+          "price": 547.04,
+          "sentiment": "bullish",
+          "symbol": "CAT"
+        },
+        "wti": {
+          "changePercent": 7.1682,
+          "price": 547.04,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 1012,
+        "name": "Caterpillar",
+        "symbol": "CAT"
+      },
+      "quote": {
+        "ask": 551.06,
+        "bid": 549.01,
+        "dailyChangePercent": 0.3601,
+        "mid": 550.035,
+        "monthlyChangePercent": -32.287,
+        "spread": 2.05,
+        "spreadPct": 0.372,
+        "weeklyChangePercent": 7.5541
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.43,
+        "netChangePercent": -0.7934
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "neutral",
+        "isFallbackSentiment": false,
+        "netSentimentScore": -0.0714,
+        "recent24h": {
+          "bearish": 6,
+          "bullish": 4,
+          "mixed": 1,
+          "neutral": 17,
+          "total": 46,
+          "unclear": 0
+        },
+        "totalStories": 46
+      },
+      "snapshotId": "snap_cat_1012_20261123T221300Z",
+      "technicals": {
+        "adx14": 14.69,
+        "atr14": 4.4003,
+        "atrPct": 0.8,
+        "ema20": 546.7001,
+        "ema50": 541.4964,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 552.54,
+        "nearestSupport": 543.4346,
+        "rsi14": 59.78,
+        "rvol": 0.8,
+        "sma200": 530.8034,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.4742,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 350.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 540.06,
+        "suggestedTakeProfitRate": 573.06
+      }
+    },
+    "COP": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": -2.8872,
+          "price": 132.19,
+          "sentiment": "bearish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "HIGH",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.3026,
+        "primary": {
+          "changePercent": -2.8872,
+          "price": 132.19,
+          "sentiment": "bearish",
+          "symbol": "COP"
+        },
+        "secondary": {
+          "changePercent": -2.8872,
+          "price": 132.19,
+          "sentiment": "bearish",
+          "symbol": "COP"
+        },
+        "wti": {
+          "changePercent": -2.8872,
+          "price": 132.19,
+          "sentiment": "bearish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 1510,
+        "name": "ConocoPhillips Co",
+        "symbol": "COP"
+      },
+      "quote": {
+        "ask": 134.18,
+        "bid": 131.0,
+        "dailyChangePercent": -0.9002,
+        "mid": 132.59,
+        "monthlyChangePercent": 4.6744,
+        "spread": 3.18,
+        "spreadPct": 2.37,
+        "weeklyChangePercent": -3.7614
+      },
+      "regime": {
+        "direction": "bearish",
+        "durationHours": 5.47,
+        "netChangePercent": -1.7467
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "bearish",
+        "isFallbackSentiment": false,
+        "netSentimentScore": -0.0426,
+        "recent24h": {
+          "bearish": 32,
+          "bullish": 28,
+          "mixed": 2,
+          "neutral": 29,
+          "total": 101,
+          "unclear": 3
+        },
+        "totalStories": 101
+      },
+      "snapshotId": "snap_cop_1510_20261123T221300Z",
+      "technicals": {
+        "adx14": 40.16,
+        "atr14": 1.0607,
+        "atrPct": 0.8,
+        "ema20": 132.4625,
+        "ema50": 133.6217,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 1283.5767,
-        "nearestSupport": 1260.0601,
-        "rsi14": 39.49,
-        "rvol": 2.98,
-        "sma200": 1368.0611,
+        "nearestResistance": 134.1811,
+        "nearestSupport": 131.97,
+        "rsi14": 29.92,
+        "rvol": 0.8,
+        "sma200": 134.744,
         "timeframe": "15m",
         "trendAlignment": "bearish"
       },
@@ -464,233 +656,41 @@
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 350.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 1293.6,
-        "suggestedTakeProfitRate": 1216.74
-      }
-    },
-    "CAT": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -5.0096,
-          "price": 510.45,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "NONE",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.002,
-        "primary": {
-          "changePercent": -5.0096,
-          "price": 510.45,
-          "sentiment": "bearish",
-          "symbol": "CAT"
-        },
-        "secondary": {
-          "changePercent": -5.0096,
-          "price": 510.45,
-          "sentiment": "bearish",
-          "symbol": "CAT"
-        },
-        "wti": {
-          "changePercent": -5.0096,
-          "price": 510.45,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 1012,
-        "name": "Caterpillar",
-        "symbol": "CAT"
-      },
-      "quote": {
-        "ask": 510.58,
-        "bid": 510.34,
-        "dailyChangePercent": -5.0077,
-        "mid": 510.46,
-        "monthlyChangePercent": -37.0417,
-        "spread": 0.24,
-        "spreadPct": 0.047,
-        "weeklyChangePercent": -14.9517
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 5.45,
-        "netChangePercent": -2.7696
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.1019,
-        "recent24h": {
-          "bearish": 3,
-          "bullish": 0,
-          "mixed": 0,
-          "neutral": 22,
-          "total": 26,
-          "unclear": 1
-        },
-        "totalStories": 108
-      },
-      "snapshotId": "snap_cat_1012_20261122T235139Z",
-      "technicals": {
-        "adx14": 21.76,
-        "atr14": 4.3675,
-        "atrPct": 0.8556,
-        "ema20": 515.33,
-        "ema50": 520.2578,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 517.0113,
-        "nearestSupport": 508.47,
-        "rsi14": 32.59,
-        "rvol": 2.44,
-        "sma200": 542.9695,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.9232,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 500.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 521.26,
-        "suggestedTakeProfitRate": 488.5
-      }
-    },
-    "COP": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": 0.8371,
-          "price": 136.12,
-          "sentiment": "bullish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "NONE",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0331,
-        "primary": {
-          "changePercent": 0.8371,
-          "price": 136.12,
-          "sentiment": "bullish",
-          "symbol": "COP"
-        },
-        "secondary": {
-          "changePercent": 0.8371,
-          "price": 136.12,
-          "sentiment": "bullish",
-          "symbol": "COP"
-        },
-        "wti": {
-          "changePercent": 0.8371,
-          "price": 136.12,
-          "sentiment": "bullish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 1510,
-        "name": "ConocoPhillips Co",
-        "symbol": "COP"
-      },
-      "quote": {
-        "ask": 136.18,
-        "bid": 136.15,
-        "dailyChangePercent": 0.8704,
-        "mid": 136.165,
-        "monthlyChangePercent": 8.8014,
-        "spread": 0.03,
-        "spreadPct": 0.022,
-        "weeklyChangePercent": -4.2979
-      },
-      "regime": {
-        "direction": "bullish",
-        "durationHours": 5.47,
-        "netChangePercent": -0.4899
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.1053,
-        "recent24h": {
-          "bearish": 12,
-          "bullish": 0,
-          "mixed": 0,
-          "neutral": 20,
-          "total": 34,
-          "unclear": 2
-        },
-        "totalStories": 114
-      },
-      "snapshotId": "snap_cop_1510_20261122T235139Z",
-      "technicals": {
-        "adx14": 21.79,
-        "atr14": 1.0893,
-        "atrPct": 0.8,
-        "ema20": 136.6668,
-        "ema50": 135.922,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bullish",
-        "nearestResistance": 137.66,
-        "nearestSupport": 135.78,
-        "rsi14": 45.3,
-        "rvol": 2.63,
-        "sma200": 134.6842,
-        "timeframe": "15m",
-        "trendAlignment": "bullish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.7046,
-        "direction": "buy",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 133.46,
-        "suggestedTakeProfitRate": 141.63
+        "suggestedStopLossRate": 133.65,
+        "suggestedTakeProfitRate": 125.7
       }
     },
     "CRWD": {
       "benchmarks": {
         "brent": {
-          "changePercent": -5.7586,
-          "price": 229.44,
+          "changePercent": -8.9217,
+          "price": 208.97,
           "sentiment": "bearish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "HIGH",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0523,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.792,
         "primary": {
-          "changePercent": -5.7586,
-          "price": 229.44,
+          "changePercent": -8.9217,
+          "price": 208.97,
           "sentiment": "bearish",
           "symbol": "CRWD"
         },
         "secondary": {
-          "changePercent": -5.7586,
-          "price": 229.44,
+          "changePercent": -8.9217,
+          "price": 208.97,
           "sentiment": "bearish",
           "symbol": "CRWD"
         },
         "wti": {
-          "changePercent": -5.7586,
-          "price": 229.44,
+          "changePercent": -8.9217,
+          "price": 208.97,
           "sentiment": "bearish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:01Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 5506,
@@ -698,51 +698,531 @@
         "symbol": "CRWD"
       },
       "quote": {
-        "ask": 229.62,
-        "bid": 229.5,
-        "dailyChangePercent": -5.7094,
-        "mid": 229.56,
-        "monthlyChangePercent": -13.2918,
-        "spread": 0.12,
-        "spreadPct": 0.0523,
-        "weeklyChangePercent": 1.3018
+        "ask": 210.7,
+        "bid": 210.55,
+        "dailyChangePercent": 0.7561,
+        "mid": 210.625,
+        "monthlyChangePercent": -20.4721,
+        "spread": 0.15,
+        "spreadPct": 0.0712,
+        "weeklyChangePercent": -8.2331
       },
       "regime": {
         "direction": "bearish",
         "durationHours": 5.53,
-        "netChangePercent": -1.4687
+        "netChangePercent": 1.1422
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": 0.1825,
+        "netSentimentScore": 0.0455,
         "recent24h": {
-          "bearish": 1,
-          "bullish": 7,
-          "mixed": 0,
-          "neutral": 13,
-          "total": 21,
+          "bearish": 50,
+          "bullish": 57,
+          "mixed": 36,
+          "neutral": 11,
+          "total": 399,
           "unclear": 0
         },
-        "totalStories": 137
+        "totalStories": 399
       },
-      "snapshotId": "snap_crwd_5506_20261122T235139Z",
+      "snapshotId": "snap_crwd_5506_20261123T221301Z",
       "technicals": {
-        "adx14": 26.98,
-        "atr14": 2.3522,
-        "atrPct": 1.0246,
-        "ema20": 230.6322,
-        "ema50": 233.009,
+        "adx14": 17.6,
+        "atr14": 2.2825,
+        "atrPct": 1.0837,
+        "ema20": 208.1307,
+        "ema50": 210.4372,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 233.0882,
-        "nearestSupport": 227.31,
-        "rsi14": 43.77,
-        "rvol": 3.0,
-        "sma200": 242.0486,
+        "nearestResistance": 214.0488,
+        "nearestSupport": 207.2012,
+        "rsi14": 59.92,
+        "rvol": 0.8,
+        "sma200": 227.7715,
         "timeframe": "15m",
         "trendAlignment": "bearish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.4,
+        "direction": "sellShort",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 350.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 216.26,
+        "suggestedTakeProfitRate": 199.14
+      }
+    },
+    "GOOGL": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 6.3365,
+          "price": 282.1,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.4715,
+        "primary": {
+          "changePercent": 6.3365,
+          "price": 282.1,
+          "sentiment": "bullish",
+          "symbol": "GOOGL"
+        },
+        "secondary": {
+          "changePercent": 6.3365,
+          "price": 282.1,
+          "sentiment": "bullish",
+          "symbol": "GOOGL"
+        },
+        "wti": {
+          "changePercent": 6.3365,
+          "price": 282.1,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 6434,
+        "name": "Alphabet Inc Class A",
+        "symbol": "GOOGL"
+      },
+      "quote": {
+        "ask": 283.47,
+        "bid": 283.39,
+        "dailyChangePercent": 0.4573,
+        "mid": 283.43,
+        "monthlyChangePercent": -17.6383,
+        "spread": 0.08,
+        "spreadPct": 0.0282,
+        "weeklyChangePercent": 6.8227
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -0.1663
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "neutral",
+        "isFallbackSentiment": false,
+        "netSentimentScore": 0.0145,
+        "recent24h": {
+          "bearish": 16,
+          "bullish": 17,
+          "mixed": 4,
+          "neutral": 30,
+          "total": 144,
+          "unclear": 2
+        },
+        "totalStories": 144
+      },
+      "snapshotId": "snap_googl_6434_20261123T221300Z",
+      "technicals": {
+        "adx14": 10.36,
+        "atr14": 2.2674,
+        "atrPct": 0.8,
+        "ema20": 282.8257,
+        "ema50": 281.3305,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 285.0422,
+        "nearestSupport": 280.325,
+        "rsi14": 54.97,
+        "rvol": 0.8,
+        "sma200": 276.169,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.8371,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 500.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 277.8,
+        "suggestedTakeProfitRate": 294.81
+      }
+    },
+    "GS": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 4.1647,
+          "price": 823.62,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.4347,
+        "primary": {
+          "changePercent": 4.1647,
+          "price": 823.62,
+          "sentiment": "bullish",
+          "symbol": "GS"
+        },
+        "secondary": {
+          "changePercent": 4.1647,
+          "price": 823.62,
+          "sentiment": "bullish",
+          "symbol": "GS"
+        },
+        "wti": {
+          "changePercent": 4.1647,
+          "price": 823.62,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 1467,
+        "name": "Goldman Sachs Group Inc",
+        "symbol": "GS"
+      },
+      "quote": {
+        "ask": 828.0,
+        "bid": 826.4,
+        "dailyChangePercent": 0.3375,
+        "mid": 827.2,
+        "monthlyChangePercent": -8.2145,
+        "spread": 1.6,
+        "spreadPct": 0.1932,
+        "weeklyChangePercent": 4.5163
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.43,
+        "netChangePercent": -0.571
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "neutral",
+        "isFallbackSentiment": false,
+        "netSentimentScore": -0.119,
+        "recent24h": {
+          "bearish": 12,
+          "bullish": 7,
+          "mixed": 0,
+          "neutral": 23,
+          "total": 49,
+          "unclear": 0
+        },
+        "totalStories": 49
+      },
+      "snapshotId": "snap_gs_1467_20261123T221300Z",
+      "technicals": {
+        "adx14": 10.63,
+        "atr14": 6.6176,
+        "atrPct": 0.8,
+        "ema20": 823.7799,
+        "ema50": 821.01,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bearish",
+        "nearestResistance": 829.53,
+        "nearestSupport": 820.26,
+        "rsi14": 57.42,
+        "rvol": 0.8,
+        "sma200": 834.9276,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.4,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 350.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 811.46,
+        "suggestedTakeProfitRate": 861.09
+      }
+    },
+    "HOOD": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 8.3642,
+          "price": 67.37,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.0148,
+        "primary": {
+          "changePercent": 8.3642,
+          "price": 67.37,
+          "sentiment": "bullish",
+          "symbol": "HOOD"
+        },
+        "secondary": {
+          "changePercent": 8.3642,
+          "price": 67.37,
+          "sentiment": "bullish",
+          "symbol": "HOOD"
+        },
+        "wti": {
+          "changePercent": 8.3642,
+          "price": 67.37,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:01Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 9272,
+        "name": "Robinhood Markets Inc.",
+        "symbol": "HOOD"
+      },
+      "quote": {
+        "ask": 67.39,
+        "bid": 67.37,
+        "dailyChangePercent": 0.0,
+        "mid": 67.38,
+        "monthlyChangePercent": -40.1156,
+        "spread": 0.02,
+        "spreadPct": 0.0297,
+        "weeklyChangePercent": 8.3642
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.49,
+        "netChangePercent": -2.9041
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "neutral",
+        "isFallbackSentiment": false,
+        "netSentimentScore": 0.0,
+        "recent24h": {
+          "bearish": 11,
+          "bullish": 11,
+          "mixed": 0,
+          "neutral": 23,
+          "total": 78,
+          "unclear": 4
+        },
+        "totalStories": 78
+      },
+      "snapshotId": "snap_hood_9272_20261123T221301Z",
+      "technicals": {
+        "adx14": 11.93,
+        "atr14": 0.59,
+        "atrPct": 0.8756,
+        "ema20": 67.6253,
+        "ema50": 67.3083,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 68.265,
+        "nearestSupport": 67.025,
+        "rsi14": 56.46,
+        "rvol": 0.8,
+        "sma200": 66.9365,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.9299,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 500.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 65.92,
+        "suggestedTakeProfitRate": 70.34
+      }
+    },
+    "INTC": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 16.3417,
+          "price": 59.66,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.8129,
+        "primary": {
+          "changePercent": 16.3417,
+          "price": 59.66,
+          "sentiment": "bullish",
+          "symbol": "INTC"
+        },
+        "secondary": {
+          "changePercent": 16.3417,
+          "price": 59.66,
+          "sentiment": "bullish",
+          "symbol": "INTC"
+        },
+        "wti": {
+          "changePercent": 16.3417,
+          "price": 59.66,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 1021,
+        "name": "Intel",
+        "symbol": "INTC"
+      },
+      "quote": {
+        "ask": 59.25,
+        "bid": 59.1,
+        "dailyChangePercent": -0.9387,
+        "mid": 59.175,
+        "monthlyChangePercent": -50.8442,
+        "spread": 0.15,
+        "spreadPct": 0.2532,
+        "weeklyChangePercent": 15.2496
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": 0.8452
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "bullish",
+        "isFallbackSentiment": false,
+        "netSentimentScore": 0.3913,
+        "recent24h": {
+          "bearish": 10,
+          "bullish": 37,
+          "mixed": 0,
+          "neutral": 21,
+          "total": 117,
+          "unclear": 1
+        },
+        "totalStories": 117
+      },
+      "snapshotId": "snap_intc_1021_20261123T221300Z",
+      "technicals": {
+        "adx14": 22.65,
+        "atr14": 0.6975,
+        "atrPct": 1.1787,
+        "ema20": 58.6739,
+        "ema50": 57.4088,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 59.66,
+        "nearestSupport": 58.1287,
+        "rsi14": 60.26,
+        "rvol": 0.8,
+        "sma200": 54.8924,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.9627,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 500.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 57.51,
+        "suggestedTakeProfitRate": 62.74
+      }
+    },
+    "META": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": 6.5545,
+          "price": 597.6,
+          "sentiment": "bullish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.3196,
+        "primary": {
+          "changePercent": 6.5545,
+          "price": 597.6,
+          "sentiment": "bullish",
+          "symbol": "META"
+        },
+        "secondary": {
+          "changePercent": 6.5545,
+          "price": 597.6,
+          "sentiment": "bullish",
+          "symbol": "META"
+        },
+        "wti": {
+          "changePercent": 6.5545,
+          "price": 597.6,
+          "sentiment": "bullish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:01Z",
+      "instrument": {
+        "assetClass": "stocks",
+        "instrumentId": 1003,
+        "name": "Meta Platforms Inc",
+        "symbol": "META"
+      },
+      "quote": {
+        "ask": 600.0,
+        "bid": 599.02,
+        "dailyChangePercent": 0.2376,
+        "mid": 599.51,
+        "monthlyChangePercent": -17.3971,
+        "spread": 0.98,
+        "spreadPct": 0.1633,
+        "weeklyChangePercent": 6.8076
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": 0.6603
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "bearish",
+        "isFallbackSentiment": false,
+        "netSentimentScore": -0.1392,
+        "recent24h": {
+          "bearish": 31,
+          "bullish": 20,
+          "mixed": 3,
+          "neutral": 25,
+          "total": 116,
+          "unclear": 0
+        },
+        "totalStories": 116
+      },
+      "snapshotId": "snap_meta_1003_20261123T221301Z",
+      "technicals": {
+        "adx14": 15.84,
+        "atr14": 4.7961,
+        "atrPct": 0.8,
+        "ema20": 597.1756,
+        "ema50": 592.1264,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 602.11,
+        "nearestSupport": 592.3159,
+        "rsi14": 58.01,
+        "rvol": 0.8,
+        "sma200": 585.55,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "hold",
@@ -752,521 +1232,41 @@
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 200.0,
         "suggestedLeverage": 1,
-        "suggestedStopLossRate": 223.68,
-        "suggestedTakeProfitRate": 241.32
-      }
-    },
-    "GOOGL": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -2.703,
-          "price": 265.29,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.1074,
-        "primary": {
-          "changePercent": -2.703,
-          "price": 265.29,
-          "sentiment": "bearish",
-          "symbol": "GOOGL"
-        },
-        "secondary": {
-          "changePercent": -2.703,
-          "price": 265.29,
-          "sentiment": "bearish",
-          "symbol": "GOOGL"
-        },
-        "wti": {
-          "changePercent": -2.703,
-          "price": 265.29,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 6434,
-        "name": "Alphabet Inc Class A",
-        "symbol": "GOOGL"
-      },
-      "quote": {
-        "ask": 265.59,
-        "bid": 265.56,
-        "dailyChangePercent": -2.5985,
-        "mid": 265.575,
-        "monthlyChangePercent": -22.8159,
-        "spread": 0.03,
-        "spreadPct": 0.0113,
-        "weeklyChangePercent": -10.2089
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 1.95,
-        "netChangePercent": -2.6709
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.0772,
-        "recent24h": {
-          "bearish": 14,
-          "bullish": 10,
-          "mixed": 2,
-          "neutral": 37,
-          "total": 69,
-          "unclear": 2
-        },
-        "totalStories": 344
-      },
-      "snapshotId": "snap_googl_6434_20261122T235139Z",
-      "technicals": {
-        "adx14": 30.12,
-        "atr14": 3.63,
-        "atrPct": 1.3668,
-        "ema20": 270.9352,
-        "ema50": 272.6865,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 271.02,
-        "nearestSupport": 265.29,
-        "rsi14": 30.16,
-        "rvol": 3.0,
-        "sma200": 280.0348,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 274.63,
-        "suggestedTakeProfitRate": 247.41
-      }
-    },
-    "GS": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -6.7065,
-          "price": 790.69,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0715,
-        "primary": {
-          "changePercent": -6.7065,
-          "price": 790.69,
-          "sentiment": "bearish",
-          "symbol": "GS"
-        },
-        "secondary": {
-          "changePercent": -6.7065,
-          "price": 790.69,
-          "sentiment": "bearish",
-          "symbol": "GS"
-        },
-        "wti": {
-          "changePercent": -6.7065,
-          "price": 790.69,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 1467,
-        "name": "Goldman Sachs Group Inc",
-        "symbol": "GS"
-      },
-      "quote": {
-        "ask": 791.45,
-        "bid": 791.06,
-        "dailyChangePercent": -6.6399,
-        "mid": 791.255,
-        "monthlyChangePercent": -12.1179,
-        "spread": 0.39,
-        "spreadPct": 0.0493,
-        "weeklyChangePercent": -13.6712
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 5.45,
-        "netChangePercent": -2.4574
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.1171,
-        "recent24h": {
-          "bearish": 7,
-          "bullish": 3,
-          "mixed": 0,
-          "neutral": 11,
-          "total": 21,
-          "unclear": 0
-        },
-        "totalStories": 111
-      },
-      "snapshotId": "snap_gs_1467_20261122T235139Z",
-      "technicals": {
-        "adx14": 54.96,
-        "atr14": 6.33,
-        "atrPct": 0.8,
-        "ema20": 800.5232,
-        "ema50": 816.1097,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 800.7501,
-        "nearestSupport": 789.6099,
-        "rsi14": 26.72,
-        "rvol": 2.86,
-        "sma200": 857.6903,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.8962,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 500.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 806.88,
-        "suggestedTakeProfitRate": 759.41
-      }
-    },
-    "HOOD": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -9.4392,
-          "price": 62.17,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "NONE",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0483,
-        "primary": {
-          "changePercent": -9.4392,
-          "price": 62.17,
-          "sentiment": "bearish",
-          "symbol": "HOOD"
-        },
-        "secondary": {
-          "changePercent": -9.4392,
-          "price": 62.17,
-          "sentiment": "bearish",
-          "symbol": "HOOD"
-        },
-        "wti": {
-          "changePercent": -9.4392,
-          "price": 62.17,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 9272,
-        "name": "Robinhood Markets Inc.",
-        "symbol": "HOOD"
-      },
-      "quote": {
-        "ask": 62.15,
-        "bid": 62.13,
-        "dailyChangePercent": -9.4829,
-        "mid": 62.14,
-        "monthlyChangePercent": -44.7644,
-        "spread": 0.02,
-        "spreadPct": 0.0322,
-        "weeklyChangePercent": -20.1901
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 5.57,
-        "netChangePercent": -5.8458
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.1636,
-        "recent24h": {
-          "bearish": 1,
-          "bullish": 3,
-          "mixed": 3,
-          "neutral": 18,
-          "total": 28,
-          "unclear": 3
-        },
-        "totalStories": 165
-      },
-      "snapshotId": "snap_hood_9272_20261122T235139Z",
-      "technicals": {
-        "adx14": 45.71,
-        "atr14": 1.0525,
-        "atrPct": 1.6937,
-        "ema20": 63.6006,
-        "ema50": 65.0731,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 63.7187,
-        "nearestSupport": 62.05,
-        "rsi14": 28.7,
-        "rvol": 3.0,
-        "sma200": 68.7049,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.984,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 500.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 64.76,
-        "suggestedTakeProfitRate": 56.87
-      }
-    },
-    "INTC": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -7.9684,
-          "price": 51.28,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.1268,
-        "primary": {
-          "changePercent": -7.9684,
-          "price": 51.28,
-          "sentiment": "bearish",
-          "symbol": "INTC"
-        },
-        "secondary": {
-          "changePercent": -7.9684,
-          "price": 51.28,
-          "sentiment": "bearish",
-          "symbol": "INTC"
-        },
-        "wti": {
-          "changePercent": -7.9684,
-          "price": 51.28,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 1021,
-        "name": "Intel",
-        "symbol": "INTC"
-      },
-      "quote": {
-        "ask": 51.35,
-        "bid": 51.34,
-        "dailyChangePercent": -7.8518,
-        "mid": 51.345,
-        "monthlyChangePercent": -57.2944,
-        "spread": 0.01,
-        "spreadPct": 0.0195,
-        "weeklyChangePercent": -13.9373
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 5.53,
-        "netChangePercent": -5.6312
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.0397,
-        "recent24h": {
-          "bearish": 10,
-          "bullish": 15,
-          "mixed": 2,
-          "neutral": 20,
-          "total": 47,
-          "unclear": 0
-        },
-        "totalStories": 252
-      },
-      "snapshotId": "snap_intc_1021_20261122T235139Z",
-      "technicals": {
-        "adx14": 17.1,
-        "atr14": 0.8196,
-        "atrPct": 1.5963,
-        "ema20": 52.7965,
-        "ema50": 53.3121,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 52.5744,
-        "nearestSupport": 51.28,
-        "rsi14": 33.52,
-        "rvol": 3.0,
-        "sma200": 55.0053,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4992,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 53.39,
-        "suggestedTakeProfitRate": 47.24
-      }
-    },
-    "META": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -5.9341,
-          "price": 560.84,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "NONE",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0686,
-        "primary": {
-          "changePercent": -5.9341,
-          "price": 560.84,
-          "sentiment": "bearish",
-          "symbol": "META"
-        },
-        "secondary": {
-          "changePercent": -5.9341,
-          "price": 560.84,
-          "sentiment": "bearish",
-          "symbol": "META"
-        },
-        "wti": {
-          "changePercent": -5.9341,
-          "price": 560.84,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "stocks",
-        "instrumentId": 1003,
-        "name": "Meta Platforms Inc",
-        "symbol": "META"
-      },
-      "quote": {
-        "ask": 561.26,
-        "bid": 561.19,
-        "dailyChangePercent": -5.8695,
-        "mid": 561.225,
-        "monthlyChangePercent": -22.6089,
-        "spread": 0.07,
-        "spreadPct": 0.0125,
-        "weeklyChangePercent": -12.5395
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -2.4444
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "bearish",
-        "isFallbackSentiment": false,
-        "netSentimentScore": -0.1508,
-        "recent24h": {
-          "bearish": 8,
-          "bullish": 17,
-          "mixed": 1,
-          "neutral": 22,
-          "total": 48,
-          "unclear": 0
-        },
-        "totalStories": 252
-      },
-      "snapshotId": "snap_meta_1003_20261122T235139Z",
-      "technicals": {
-        "adx14": 37.63,
-        "atr14": 5.148,
-        "atrPct": 0.9173,
-        "ema20": 567.3358,
-        "ema50": 574.3493,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 568.947,
-        "nearestSupport": 559.4,
-        "rsi14": 35.46,
-        "rvol": 3.0,
-        "sma200": 600.1991,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 574.06,
-        "suggestedTakeProfitRate": 535.45
+        "suggestedStopLossRate": 587.52,
+        "suggestedTakeProfitRate": 623.49
       }
     },
     "MRK": {
       "benchmarks": {
         "brent": {
-          "changePercent": 0.6852,
-          "price": 133.72,
+          "changePercent": 1.3087,
+          "price": 135.47,
           "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0598,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.5758,
         "primary": {
-          "changePercent": 0.6852,
-          "price": 133.72,
+          "changePercent": 1.3087,
+          "price": 135.47,
           "sentiment": "bullish",
           "symbol": "MRK"
         },
         "secondary": {
-          "changePercent": 0.6852,
-          "price": 133.72,
+          "changePercent": 1.3087,
+          "price": 135.47,
           "sentiment": "bullish",
           "symbol": "MRK"
         },
         "wti": {
-          "changePercent": 0.6852,
-          "price": 133.72,
+          "changePercent": 1.3087,
+          "price": 135.47,
           "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1027,
@@ -1274,95 +1274,95 @@
         "symbol": "MRK"
       },
       "quote": {
-        "ask": 133.82,
-        "bid": 133.78,
-        "dailyChangePercent": 0.7454,
-        "mid": 133.8,
-        "monthlyChangePercent": -7.921,
-        "spread": 0.04,
-        "spreadPct": 0.0299,
-        "weeklyChangePercent": -9.4478
+        "ask": 137.0,
+        "bid": 135.5,
+        "dailyChangePercent": 0.0221,
+        "mid": 136.25,
+        "monthlyChangePercent": -6.7511,
+        "spread": 1.5,
+        "spreadPct": 1.0949,
+        "weeklyChangePercent": 1.3311
       },
       "regime": {
         "direction": "bullish",
-        "durationHours": 5.5,
-        "netChangePercent": -1.5643
+        "durationHours": 5.48,
+        "netChangePercent": -0.3274
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": 0.2281,
+        "netSentimentScore": 0.0,
         "recent24h": {
-          "bearish": 0,
-          "bullish": 1,
+          "bearish": 4,
+          "bullish": 4,
           "mixed": 0,
-          "neutral": 9,
-          "total": 10,
-          "unclear": 0
+          "neutral": 8,
+          "total": 17,
+          "unclear": 1
         },
-        "totalStories": 57
+        "totalStories": 17
       },
-      "snapshotId": "snap_mrk_1027_20261122T235139Z",
+      "snapshotId": "snap_mrk_1027_20261123T221300Z",
       "technicals": {
-        "adx14": 16.45,
-        "atr14": 1.0704,
+        "adx14": 13.76,
+        "atr14": 1.09,
         "atrPct": 0.8,
-        "ema20": 134.3692,
-        "ema50": 134.0848,
+        "ema20": 135.3134,
+        "ema50": 134.9788,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 135.4056,
-        "nearestSupport": 133.17,
-        "rsi14": 42.32,
-        "rvol": 3.0,
-        "sma200": 135.0735,
+        "nearestResistance": 137.885,
+        "nearestSupport": 134.62,
+        "rsi14": 54.93,
+        "rvol": 0.8,
+        "sma200": 133.9194,
         "timeframe": "15m",
         "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.763,
+        "convictionScore": 0.4,
         "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 500.0,
+        "suggestedAmountUsd": 350.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 131.14,
-        "suggestedTakeProfitRate": 139.17
+        "suggestedStopLossRate": 134.28,
+        "suggestedTakeProfitRate": 142.45
       }
     },
     "MS": {
       "benchmarks": {
         "brent": {
-          "changePercent": -5.3206,
-          "price": 165.67,
-          "sentiment": "bearish",
+          "changePercent": 4.183,
+          "price": 172.6,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0664,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.4258,
         "primary": {
-          "changePercent": -5.3206,
-          "price": 165.67,
-          "sentiment": "bearish",
+          "changePercent": 4.183,
+          "price": 172.6,
+          "sentiment": "bullish",
           "symbol": "MS"
         },
         "secondary": {
-          "changePercent": -5.3206,
-          "price": 165.67,
-          "sentiment": "bearish",
+          "changePercent": 4.183,
+          "price": 172.6,
+          "sentiment": "bullish",
           "symbol": "MS"
         },
         "wti": {
-          "changePercent": -5.3206,
-          "price": 165.67,
-          "sentiment": "bearish",
+          "changePercent": 4.183,
+          "price": 172.6,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1976,
@@ -1370,95 +1370,95 @@
         "symbol": "MS"
       },
       "quote": {
-        "ask": 165.64,
-        "bid": 165.48,
-        "dailyChangePercent": -5.3835,
-        "mid": 165.56,
-        "monthlyChangePercent": -11.9736,
-        "spread": 0.16,
-        "spreadPct": 0.0966,
-        "weeklyChangePercent": -13.1602
+        "ask": 173.99,
+        "bid": 172.68,
+        "dailyChangePercent": 0.0463,
+        "mid": 173.335,
+        "monthlyChangePercent": -8.188,
+        "spread": 1.31,
+        "spreadPct": 0.7529,
+        "weeklyChangePercent": 4.2313
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.49,
-        "netChangePercent": -2.6588
+        "direction": "bullish",
+        "durationHours": 5.47,
+        "netChangePercent": -0.8843
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0196,
+        "netSentimentScore": 0.1486,
         "recent24h": {
-          "bearish": 4,
-          "bullish": 6,
+          "bearish": 12,
+          "bullish": 23,
           "mixed": 0,
-          "neutral": 10,
-          "total": 20,
+          "neutral": 39,
+          "total": 106,
           "unclear": 0
         },
-        "totalStories": 102
+        "totalStories": 106
       },
-      "snapshotId": "snap_ms_1976_20261122T235139Z",
+      "snapshotId": "snap_ms_1976_20261123T221300Z",
       "technicals": {
-        "adx14": 43.05,
-        "atr14": 1.3245,
+        "adx14": 11.0,
+        "atr14": 1.3867,
         "atrPct": 0.8,
-        "ema20": 167.7089,
-        "ema50": 169.9906,
+        "ema20": 172.7004,
+        "ema50": 172.2084,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 167.5467,
-        "nearestSupport": 165.03,
-        "rsi14": 25.87,
-        "rvol": 3.0,
-        "sma200": 177.4543,
+        "nearestResistance": 174.58,
+        "nearestSupport": 172.2,
+        "rsi14": 50.54,
+        "rvol": 1.12,
+        "sma200": 174.1948,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.5638,
-        "direction": "sellShort",
+        "convictionScore": 0.8585,
+        "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
+        "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 168.79,
-        "suggestedTakeProfitRate": 158.86
+        "suggestedStopLossRate": 170.52,
+        "suggestedTakeProfitRate": 180.92
       }
     },
     "MU": {
       "benchmarks": {
         "brent": {
-          "changePercent": -13.894,
-          "price": 594.51,
-          "sentiment": "bearish",
+          "changePercent": 19.0392,
+          "price": 707.7,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0395,
+        "eventRiskFlag": "HIGH",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.2275,
         "primary": {
-          "changePercent": -13.894,
-          "price": 594.51,
-          "sentiment": "bearish",
+          "changePercent": 19.0392,
+          "price": 707.7,
+          "sentiment": "bullish",
           "symbol": "MU"
         },
         "secondary": {
-          "changePercent": -13.894,
-          "price": 594.51,
-          "sentiment": "bearish",
+          "changePercent": 19.0392,
+          "price": 707.7,
+          "sentiment": "bullish",
           "symbol": "MU"
         },
         "wti": {
-          "changePercent": -13.894,
-          "price": 594.51,
-          "sentiment": "bearish",
+          "changePercent": 19.0392,
+          "price": 707.7,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1130,
@@ -1466,95 +1466,95 @@
         "symbol": "MU"
       },
       "quote": {
-        "ask": 594.43,
-        "bid": 594.12,
-        "dailyChangePercent": -13.9281,
-        "mid": 594.275,
-        "monthlyChangePercent": -44.2053,
-        "spread": 0.31,
-        "spreadPct": 0.0522,
-        "weeklyChangePercent": -23.6455
+        "ask": 709.71,
+        "bid": 708.91,
+        "dailyChangePercent": 0.171,
+        "mid": 709.31,
+        "monthlyChangePercent": -33.4426,
+        "spread": 0.8,
+        "spreadPct": 0.1127,
+        "weeklyChangePercent": 19.2427
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -4.2965
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -1.162
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
-        "dominantDirection": "bearish",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.1646,
+        "netSentimentScore": 0.4681,
         "recent24h": {
           "bearish": 5,
-          "bullish": 6,
-          "mixed": 0,
-          "neutral": 14,
-          "total": 26,
+          "bullish": 27,
+          "mixed": 3,
+          "neutral": 11,
+          "total": 94,
           "unclear": 1
         },
-        "totalStories": 158
+        "totalStories": 94
       },
-      "snapshotId": "snap_mu_1130_20261122T235139Z",
+      "snapshotId": "snap_mu_1130_20261123T221300Z",
       "technicals": {
-        "adx14": 39.0,
-        "atr14": 9.0811,
-        "atrPct": 1.5281,
-        "ema20": 606.376,
-        "ema50": 628.3245,
+        "adx14": 19.62,
+        "atr14": 6.3825,
+        "atrPct": 0.8998,
+        "ema20": 704.0026,
+        "ema50": 685.9162,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 607.8966,
-        "nearestSupport": 590.03,
-        "rsi14": 34.71,
-        "rvol": 2.47,
-        "sma200": 688.0872,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 718.8837,
+        "nearestSupport": 699.7363,
+        "rsi14": 61.26,
+        "rvol": 0.8,
+        "sma200": 661.1916,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
+        "convictionScore": 0.8164,
+        "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
+        "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 616.82,
-        "suggestedTakeProfitRate": 548.71
+        "suggestedStopLossRate": 693.75,
+        "suggestedTakeProfitRate": 741.62
       }
     },
     "NVDA": {
       "benchmarks": {
         "brent": {
-          "changePercent": -14.0088,
-          "price": 125.53,
-          "sentiment": "bearish",
+          "changePercent": 31.4825,
+          "price": 165.05,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.3067,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.0242,
         "primary": {
-          "changePercent": -14.0088,
-          "price": 125.53,
-          "sentiment": "bearish",
+          "changePercent": 31.4825,
+          "price": 165.05,
+          "sentiment": "bullish",
           "symbol": "NVDA"
         },
         "secondary": {
-          "changePercent": -14.0088,
-          "price": 125.53,
-          "sentiment": "bearish",
+          "changePercent": 31.4825,
+          "price": 165.05,
+          "sentiment": "bullish",
           "symbol": "NVDA"
         },
         "wti": {
-          "changePercent": -14.0088,
-          "price": 125.53,
-          "sentiment": "bearish",
+          "changePercent": 31.4825,
+          "price": 165.05,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1137,
@@ -1562,49 +1562,145 @@
         "symbol": "NVDA"
       },
       "quote": {
-        "ask": 125.93,
-        "bid": 125.9,
-        "dailyChangePercent": -13.745,
-        "mid": 125.915,
-        "monthlyChangePercent": -44.866,
+        "ask": 165.02,
+        "bid": 165.0,
+        "dailyChangePercent": -0.0303,
+        "mid": 165.01,
+        "monthlyChangePercent": -27.752,
+        "spread": 0.02,
+        "spreadPct": 0.0121,
+        "weeklyChangePercent": 31.4427
+      },
+      "regime": {
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -3.0999
+      },
+      "sentiment": {
+        "assessmentProvider": "copilot_llm",
+        "dominantDirection": "bullish",
+        "isFallbackSentiment": false,
+        "netSentimentScore": 0.0171,
+        "recent24h": {
+          "bearish": 110,
+          "bullish": 116,
+          "mixed": 19,
+          "neutral": 95,
+          "total": 1165,
+          "unclear": 10
+        },
+        "totalStories": 1165
+      },
+      "snapshotId": "snap_nvda_1137_20261123T221300Z",
+      "technicals": {
+        "adx14": 26.55,
+        "atr14": 1.7888,
+        "atrPct": 1.084,
+        "ema20": 164.2207,
+        "ema50": 157.6711,
+        "htfTimeframe": "4h",
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 167.6931,
+        "nearestSupport": 163.305,
+        "rsi14": 58.86,
+        "rvol": 0.8,
+        "sma200": 144.425,
+        "timeframe": "15m",
+        "trendAlignment": "bullish"
+      },
+      "upstreamSignal": {
+        "action": "open",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.9254,
+        "direction": "buy",
+        "isFallbackSentiment": false,
+        "suggestedAmountUsd": 500.0,
+        "suggestedLeverage": 2,
+        "suggestedStopLossRate": 160.55,
+        "suggestedTakeProfitRate": 173.96
+      }
+    },
+    "OIL": {
+      "benchmarks": {
+        "brent": {
+          "changePercent": -3.5909,
+          "price": 86.72,
+          "sentiment": "bearish",
+          "symbol": "BZ=F"
+        },
+        "eventRiskFlag": "MEDIUM",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.405,
+        "primary": {
+          "changePercent": -3.7885,
+          "price": 80.25,
+          "sentiment": "bearish",
+          "symbol": "CL=F"
+        },
+        "secondary": {
+          "changePercent": -3.5909,
+          "price": 86.72,
+          "sentiment": "bearish",
+          "symbol": "BZ=F"
+        },
+        "wti": {
+          "changePercent": -3.7885,
+          "price": 80.25,
+          "sentiment": "bearish",
+          "symbol": "CL=F"
+        }
+      },
+      "capturedAt": "2026-11-23T22:13:00Z",
+      "instrument": {
+        "assetClass": "commodities",
+        "instrumentId": 17,
+        "name": "Oil (Non Expiry)",
+        "symbol": "OIL"
+      },
+      "quote": {
+        "ask": 79.94,
+        "bid": 79.91,
+        "dailyChangePercent": -4.4084,
+        "mid": 79.925,
+        "monthlyChangePercent": -21.2836,
         "spread": 0.03,
-        "spreadPct": 0.0238,
-        "weeklyChangePercent": -22.6804
+        "spreadPct": 0.0375,
+        "weeklyChangePercent": -4.4084
       },
       "regime": {
         "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -8.9449
+        "durationHours": 9.15,
+        "netChangePercent": -2.3128
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "bearish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.2661,
+        "netSentimentScore": -0.2593,
         "recent24h": {
-          "bearish": 106,
-          "bullish": 52,
-          "mixed": 12,
-          "neutral": 103,
-          "total": 303,
-          "unclear": 11
+          "bearish": 14,
+          "bullish": 7,
+          "mixed": 2,
+          "neutral": 4,
+          "total": 30,
+          "unclear": 0
         },
-        "totalStories": 1208
+        "totalStories": 30
       },
-      "snapshotId": "snap_nvda_1137_20261122T235139Z",
+      "snapshotId": "snap_oil_17_20261123T221300Z",
       "technicals": {
-        "adx14": 49.34,
-        "atr14": 3.2463,
-        "atrPct": 2.5781,
-        "ema20": 132.4584,
-        "ema50": 136.8914,
+        "adx14": 33.91,
+        "atr14": 0.6394,
+        "atrPct": 0.8,
+        "ema20": 80.3015,
+        "ema50": 80.987,
         "htfTimeframe": "4h",
         "htfTrendAlignment": "bearish",
-        "nearestResistance": 130.7844,
-        "nearestSupport": 125.53,
-        "rsi14": 22.82,
-        "rvol": 2.71,
-        "sma200": 146.7429,
+        "nearestResistance": 80.8841,
+        "nearestSupport": 79.91,
+        "rsi14": 39.89,
+        "rvol": 3.0,
+        "sma200": 82.8726,
         "timeframe": "15m",
         "trendAlignment": "bearish"
       },
@@ -1615,138 +1711,42 @@
         "direction": "sellShort",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
-        "suggestedLeverage": 2,
-        "suggestedStopLossRate": 134.02,
-        "suggestedTakeProfitRate": 109.67
-      }
-    },
-    "OIL": {
-      "benchmarks": {
-        "brent": {
-          "changePercent": -0.6337,
-          "price": 89.38,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": false,
-        "priceDivergencePct": 0.181,
-        "primary": {
-          "changePercent": -0.6234,
-          "price": 82.89,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        },
-        "secondary": {
-          "changePercent": -0.6337,
-          "price": 89.38,
-          "sentiment": "bearish",
-          "symbol": "BZ=F"
-        },
-        "wti": {
-          "changePercent": -0.6234,
-          "price": 82.89,
-          "sentiment": "bearish",
-          "symbol": "CL=F"
-        }
-      },
-      "capturedAt": "2026-11-22T23:51:39Z",
-      "instrument": {
-        "assetClass": "commodities",
-        "instrumentId": 17,
-        "name": "Oil (Non Expiry)",
-        "symbol": "OIL"
-      },
-      "quote": {
-        "ask": 82.76,
-        "bid": 82.72,
-        "dailyChangePercent": -1.0516,
-        "mid": 82.74,
-        "monthlyChangePercent": -18.5194,
-        "spread": 0.04,
-        "spreadPct": 0.0483,
-        "weeklyChangePercent": -1.0516
-      },
-      "regime": {
-        "direction": "bearish",
-        "durationHours": 0.51,
-        "netChangePercent": -0.2407
-      },
-      "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "bullish",
-        "isFallbackSentiment": false,
-        "netSentimentScore": 0.1463,
-        "recent24h": {
-          "bearish": 4,
-          "bullish": 2,
-          "mixed": 0,
-          "neutral": 1,
-          "total": 7,
-          "unclear": 0
-        },
-        "totalStories": 41
-      },
-      "snapshotId": "snap_oil_17_20261122T235139Z",
-      "technicals": {
-        "adx14": 31.73,
-        "atr14": 0.6675,
-        "atrPct": 0.8067,
-        "ema20": 83.3746,
-        "ema50": 83.5335,
-        "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 83.7412,
-        "nearestSupport": 82.47,
-        "rsi14": 14.78,
-        "rvol": 3.0,
-        "sma200": 83.5383,
-        "timeframe": "15m",
-        "trendAlignment": "bearish"
-      },
-      "upstreamSignal": {
-        "action": "hold",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.12,
-        "direction": "neutral",
-        "isFallbackSentiment": false,
-        "suggestedAmountUsd": 200.0,
         "suggestedLeverage": 5,
-        "suggestedStopLossRate": 81.07,
-        "suggestedTakeProfitRate": 86.08
+        "suggestedStopLossRate": 81.51,
+        "suggestedTakeProfitRate": 76.71
       }
     },
     "ORCL": {
       "benchmarks": {
         "brent": {
-          "changePercent": -8.4833,
-          "price": 101.19,
-          "sentiment": "bearish",
+          "changePercent": 12.3431,
+          "price": 113.68,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0692,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.4002,
         "primary": {
-          "changePercent": -8.4833,
-          "price": 101.19,
-          "sentiment": "bearish",
+          "changePercent": 12.3431,
+          "price": 113.68,
+          "sentiment": "bullish",
           "symbol": "ORCL"
         },
         "secondary": {
-          "changePercent": -8.4833,
-          "price": 101.19,
-          "sentiment": "bearish",
+          "changePercent": 12.3431,
+          "price": 113.68,
+          "sentiment": "bullish",
           "symbol": "ORCL"
         },
         "wti": {
-          "changePercent": -8.4833,
-          "price": 101.19,
-          "sentiment": "bearish",
+          "changePercent": 12.3431,
+          "price": 113.68,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1135,
@@ -1754,95 +1754,95 @@
         "symbol": "ORCL"
       },
       "quote": {
-        "ask": 101.13,
-        "bid": 101.11,
-        "dailyChangePercent": -8.5466,
-        "mid": 101.12,
-        "monthlyChangePercent": -26.3511,
-        "spread": 0.02,
-        "spreadPct": 0.0198,
-        "weeklyChangePercent": -19.3299
+        "ask": 114.22,
+        "bid": 114.05,
+        "dailyChangePercent": 0.3255,
+        "mid": 114.135,
+        "monthlyChangePercent": -16.9337,
+        "spread": 0.17,
+        "spreadPct": 0.1488,
+        "weeklyChangePercent": 12.7088
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.54,
-        "netChangePercent": -3.967
+        "direction": "bullish",
+        "durationHours": 5.56,
+        "netChangePercent": -2.3457
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0773,
+        "netSentimentScore": 0.3016,
         "recent24h": {
-          "bearish": 12,
-          "bullish": 12,
-          "mixed": 3,
-          "neutral": 17,
-          "total": 44,
-          "unclear": 0
+          "bearish": 13,
+          "bullish": 32,
+          "mixed": 2,
+          "neutral": 14,
+          "total": 128,
+          "unclear": 2
         },
-        "totalStories": 194
+        "totalStories": 128
       },
-      "snapshotId": "snap_orcl_1135_20261122T235139Z",
+      "snapshotId": "snap_orcl_1135_20261123T221300Z",
       "technicals": {
-        "adx14": 42.82,
-        "atr14": 1.21,
-        "atrPct": 1.1966,
-        "ema20": 102.6234,
-        "ema50": 104.6426,
+        "adx14": 19.32,
+        "atr14": 1.0176,
+        "atrPct": 0.8916,
+        "ema20": 113.4125,
+        "ema50": 111.5932,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 102.935,
-        "nearestSupport": 100.58,
-        "rsi14": 32.07,
-        "rvol": 3.0,
-        "sma200": 111.0125,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 115.6615,
+        "nearestSupport": 112.6085,
+        "rsi14": 58.35,
+        "rvol": 0.8,
+        "sma200": 108.1638,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.8931,
-        "direction": "sellShort",
+        "convictionScore": 0.9912,
+        "direction": "buy",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 104.14,
-        "suggestedTakeProfitRate": 95.06
+        "suggestedStopLossRate": 111.68,
+        "suggestedTakeProfitRate": 119.31
       }
     },
     "PLTR": {
       "benchmarks": {
         "brent": {
-          "changePercent": -6.6307,
-          "price": 143.49,
-          "sentiment": "bearish",
+          "changePercent": 11.06,
+          "price": 159.36,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0836,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 1.1358,
         "primary": {
-          "changePercent": -6.6307,
-          "price": 143.49,
-          "sentiment": "bearish",
+          "changePercent": 11.06,
+          "price": 159.36,
+          "sentiment": "bullish",
           "symbol": "PLTR"
         },
         "secondary": {
-          "changePercent": -6.6307,
-          "price": 143.49,
-          "sentiment": "bearish",
+          "changePercent": 11.06,
+          "price": 159.36,
+          "sentiment": "bullish",
           "symbol": "PLTR"
         },
         "wti": {
-          "changePercent": -6.6307,
-          "price": 143.49,
-          "sentiment": "bearish",
+          "changePercent": 11.06,
+          "price": 159.36,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 7991,
@@ -1850,95 +1850,95 @@
         "symbol": "PLTR"
       },
       "quote": {
-        "ask": 143.62,
-        "bid": 143.6,
-        "dailyChangePercent": -6.5526,
-        "mid": 143.61,
-        "monthlyChangePercent": -23.2237,
-        "spread": 0.02,
-        "spreadPct": 0.0139,
-        "weeklyChangePercent": -14.5128
+        "ask": 157.57,
+        "bid": 157.53,
+        "dailyChangePercent": -1.1483,
+        "mid": 157.55,
+        "monthlyChangePercent": -15.7819,
+        "spread": 0.04,
+        "spreadPct": 0.0254,
+        "weeklyChangePercent": 9.7847
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -3.3327
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -0.636
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0444,
+        "netSentimentScore": 0.48,
         "recent24h": {
-          "bearish": 0,
-          "bullish": 5,
-          "mixed": 1,
-          "neutral": 31,
-          "total": 37,
+          "bearish": 2,
+          "bullish": 14,
+          "mixed": 0,
+          "neutral": 9,
+          "total": 31,
           "unclear": 0
         },
-        "totalStories": 90
+        "totalStories": 31
       },
-      "snapshotId": "snap_pltr_7991_20261122T235139Z",
+      "snapshotId": "snap_pltr_7991_20261123T221300Z",
       "technicals": {
-        "adx14": 22.56,
-        "atr14": 1.4263,
-        "atrPct": 0.9931,
-        "ema20": 145.5608,
-        "ema50": 147.323,
+        "adx14": 28.97,
+        "atr14": 1.2604,
+        "atrPct": 0.8,
+        "ema20": 158.5603,
+        "ema50": 156.1856,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 145.7494,
-        "nearestSupport": 143.295,
-        "rsi14": 34.72,
-        "rvol": 3.0,
-        "sma200": 154.0871,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 159.4406,
+        "nearestSupport": 156.8638,
+        "rsi14": 61.98,
+        "rvol": 0.8,
+        "sma200": 151.4937,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
+        "convictionScore": 0.9234,
+        "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
+        "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 147.17,
-        "suggestedTakeProfitRate": 136.47
+        "suggestedStopLossRate": 154.42,
+        "suggestedTakeProfitRate": 163.87
       }
     },
     "QCOM": {
       "benchmarks": {
         "brent": {
-          "changePercent": -7.4502,
-          "price": 149.94,
-          "sentiment": "bearish",
+          "changePercent": 10.2975,
+          "price": 165.38,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0067,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.0937,
         "primary": {
-          "changePercent": -7.4502,
-          "price": 149.94,
-          "sentiment": "bearish",
+          "changePercent": 10.2975,
+          "price": 165.38,
+          "sentiment": "bullish",
           "symbol": "QCOM"
         },
         "secondary": {
-          "changePercent": -7.4502,
-          "price": 149.94,
-          "sentiment": "bearish",
+          "changePercent": 10.2975,
+          "price": 165.38,
+          "sentiment": "bullish",
           "symbol": "QCOM"
         },
         "wti": {
-          "changePercent": -7.4502,
-          "price": 149.94,
-          "sentiment": "bearish",
+          "changePercent": 10.2975,
+          "price": 165.38,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1485,
@@ -1946,95 +1946,95 @@
         "symbol": "QCOM"
       },
       "quote": {
-        "ask": 149.98,
-        "bid": 149.92,
-        "dailyChangePercent": -7.444,
-        "mid": 149.95,
-        "monthlyChangePercent": -18.5231,
-        "spread": 0.06,
-        "spreadPct": 0.04,
-        "weeklyChangePercent": -13.0573
+        "ask": 165.4,
+        "bid": 165.05,
+        "dailyChangePercent": -0.1995,
+        "mid": 165.225,
+        "monthlyChangePercent": -10.3184,
+        "spread": 0.35,
+        "spreadPct": 0.2116,
+        "weeklyChangePercent": 10.0774
       },
       "regime": {
-        "direction": "bearish",
+        "direction": "bullish",
         "durationHours": 5.55,
-        "netChangePercent": -5.4245
+        "netChangePercent": 0.0302
       },
       "sentiment": {
-        "assessmentProvider": "gemini_api_key_llm",
+        "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.1099,
+        "netSentimentScore": 0.0,
         "recent24h": {
-          "bearish": 3,
-          "bullish": 6,
-          "mixed": 0,
-          "neutral": 9,
-          "total": 18,
+          "bearish": 10,
+          "bullish": 10,
+          "mixed": 1,
+          "neutral": 11,
+          "total": 32,
           "unclear": 0
         },
-        "totalStories": 91
+        "totalStories": 32
       },
-      "snapshotId": "snap_qcom_1485_20261122T235139Z",
+      "snapshotId": "snap_qcom_1485_20261123T221300Z",
       "technicals": {
-        "adx14": 26.95,
-        "atr14": 2.4,
-        "atrPct": 1.6005,
-        "ema20": 154.4252,
-        "ema50": 156.6674,
+        "adx14": 29.65,
+        "atr14": 1.3218,
+        "atrPct": 0.8,
+        "ema20": 164.2442,
+        "ema50": 162.1866,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 153.55,
-        "nearestSupport": 149.94,
-        "rsi14": 19.49,
-        "rvol": 3.0,
-        "sma200": 160.5147,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 165.49,
+        "nearestSupport": 163.2423,
+        "rsi14": 58.13,
+        "rvol": 0.8,
+        "sma200": 159.2224,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
-        "assessmentProvider": "gemini_api_key_llm",
-        "convictionScore": 0.9301,
-        "direction": "sellShort",
+        "assessmentProvider": "copilot_llm",
+        "convictionScore": 0.8751,
+        "direction": "buy",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 155.92,
-        "suggestedTakeProfitRate": 137.92
+        "suggestedStopLossRate": 162.1,
+        "suggestedTakeProfitRate": 172.01
       }
     },
     "SHOP": {
       "benchmarks": {
         "brent": {
-          "changePercent": -6.2514,
-          "price": 123.72,
-          "sentiment": "bearish",
+          "changePercent": 8.5516,
+          "price": 134.3,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
         "eventRiskFlag": "MEDIUM",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.0162,
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.1489,
         "primary": {
-          "changePercent": -6.2514,
-          "price": 123.72,
-          "sentiment": "bearish",
+          "changePercent": 8.5516,
+          "price": 134.3,
+          "sentiment": "bullish",
           "symbol": "SHOP"
         },
         "secondary": {
-          "changePercent": -6.2514,
-          "price": 123.72,
-          "sentiment": "bearish",
+          "changePercent": 8.5516,
+          "price": 134.3,
+          "sentiment": "bullish",
           "symbol": "SHOP"
         },
         "wti": {
-          "changePercent": -6.2514,
-          "price": 123.72,
-          "sentiment": "bearish",
+          "changePercent": 8.5516,
+          "price": 134.3,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 4148,
@@ -2042,95 +2042,95 @@
         "symbol": "SHOP"
       },
       "quote": {
-        "ask": 123.76,
-        "bid": 123.72,
-        "dailyChangePercent": -6.2363,
-        "mid": 123.74,
-        "monthlyChangePercent": -16.561,
-        "spread": 0.04,
-        "spreadPct": 0.0323,
-        "weeklyChangePercent": -15.8746
+        "ask": 135.0,
+        "bid": 134.0,
+        "dailyChangePercent": 8.3091,
+        "mid": 134.5,
+        "monthlyChangePercent": -9.6426,
+        "spread": 1.0,
+        "spreadPct": 0.7407,
+        "weeklyChangePercent": 8.3091
       },
       "regime": {
-        "direction": "bearish",
+        "direction": "bullish",
         "durationHours": 5.55,
-        "netChangePercent": -5.5284
+        "netChangePercent": -1.4023
       },
       "sentiment": {
         "assessmentProvider": "copilot_llm",
         "dominantDirection": "neutral",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.104,
+        "netSentimentScore": 0.1951,
         "recent24h": {
-          "bearish": 3,
-          "bullish": 5,
+          "bearish": 4,
+          "bullish": 12,
           "mixed": 0,
           "neutral": 23,
-          "total": 31,
-          "unclear": 0
+          "total": 47,
+          "unclear": 2
         },
-        "totalStories": 125
+        "totalStories": 47
       },
-      "snapshotId": "snap_shop_4148_20261122T235139Z",
+      "snapshotId": "snap_shop_4148_20261123T221300Z",
       "technicals": {
-        "adx14": 31.54,
-        "atr14": 2.14,
-        "atrPct": 1.7294,
-        "ema20": 126.1804,
-        "ema50": 128.0627,
+        "adx14": 18.83,
+        "atr14": 1.076,
+        "atrPct": 0.8,
+        "ema20": 134.0756,
+        "ema50": 132.8916,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 126.95,
-        "nearestSupport": 123.0,
-        "rsi14": 30.78,
-        "rvol": 3.0,
-        "sma200": 134.4815,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 136.114,
+        "nearestSupport": 133.78,
+        "rsi14": 51.52,
+        "rvol": 0.8,
+        "sma200": 130.4958,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
         "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.9133,
-        "direction": "sellShort",
+        "convictionScore": 0.8902,
+        "direction": "buy",
         "isFallbackSentiment": false,
         "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 129.07,
-        "suggestedTakeProfitRate": 113.02
+        "suggestedStopLossRate": 132.31,
+        "suggestedTakeProfitRate": 140.38
       }
     },
     "TXN": {
       "benchmarks": {
         "brent": {
-          "changePercent": -7.699,
-          "price": 263.75,
-          "sentiment": "bearish",
+          "changePercent": 10.4038,
+          "price": 291.19,
+          "sentiment": "bullish",
           "symbol": "BZ=F"
         },
-        "eventRiskFlag": "NONE",
-        "isWeekendClosed": true,
-        "priceDivergencePct": 0.127,
+        "eventRiskFlag": "HIGH",
+        "isWeekendClosed": false,
+        "priceDivergencePct": 0.0258,
         "primary": {
-          "changePercent": -7.699,
-          "price": 263.75,
-          "sentiment": "bearish",
+          "changePercent": 10.4038,
+          "price": 291.19,
+          "sentiment": "bullish",
           "symbol": "TXN"
         },
         "secondary": {
-          "changePercent": -7.699,
-          "price": 263.75,
-          "sentiment": "bearish",
+          "changePercent": 10.4038,
+          "price": 291.19,
+          "sentiment": "bullish",
           "symbol": "TXN"
         },
         "wti": {
-          "changePercent": -7.699,
-          "price": 263.75,
-          "sentiment": "bearish",
+          "changePercent": 10.4038,
+          "price": 291.19,
+          "sentiment": "bullish",
           "symbol": "CL=F"
         }
       },
-      "capturedAt": "2026-11-22T23:51:39Z",
+      "capturedAt": "2026-11-23T22:13:00Z",
       "instrument": {
         "assetClass": "stocks",
         "instrumentId": 1634,
@@ -2138,62 +2138,62 @@
         "symbol": "TXN"
       },
       "quote": {
-        "ask": 264.1,
-        "bid": 264.07,
-        "dailyChangePercent": -7.5818,
-        "mid": 264.085,
-        "monthlyChangePercent": -5.7142,
-        "spread": 0.03,
-        "spreadPct": 0.0114,
-        "weeklyChangePercent": -13.0155
+        "ask": 291.87,
+        "bid": 290.66,
+        "dailyChangePercent": -0.182,
+        "mid": 291.265,
+        "monthlyChangePercent": 3.7738,
+        "spread": 1.21,
+        "spreadPct": 0.4146,
+        "weeklyChangePercent": 10.2028
       },
       "regime": {
-        "direction": "bearish",
-        "durationHours": 5.55,
-        "netChangePercent": -3.6459
+        "direction": "bullish",
+        "durationHours": 5.53,
+        "netChangePercent": -1.4485
       },
       "sentiment": {
-        "assessmentProvider": "copilot_llm",
-        "dominantDirection": "neutral",
+        "assessmentProvider": "gemini_api_key_llm",
+        "dominantDirection": "bullish",
         "isFallbackSentiment": false,
-        "netSentimentScore": -0.0667,
+        "netSentimentScore": 0.1818,
         "recent24h": {
-          "bearish": 0,
-          "bullish": 0,
+          "bearish": 6,
+          "bullish": 10,
           "mixed": 0,
-          "neutral": 5,
-          "total": 5,
+          "neutral": 6,
+          "total": 22,
           "unclear": 0
         },
-        "totalStories": 45
+        "totalStories": 22
       },
-      "snapshotId": "snap_txn_1634_20261122T235139Z",
+      "snapshotId": "snap_txn_1634_20261123T221300Z",
       "technicals": {
-        "adx14": 33.12,
-        "atr14": 2.755,
-        "atrPct": 1.0432,
-        "ema20": 268.9898,
-        "ema50": 273.5834,
+        "adx14": 17.1,
+        "atr14": 2.5543,
+        "atrPct": 0.877,
+        "ema20": 289.8299,
+        "ema50": 286.0628,
         "htfTimeframe": "4h",
-        "htfTrendAlignment": "bearish",
-        "nearestResistance": 268.2175,
-        "nearestSupport": 263.75,
-        "rsi14": 28.08,
-        "rvol": 3.0,
-        "sma200": 286.3922,
+        "htfTrendAlignment": "bullish",
+        "nearestResistance": 295.0965,
+        "nearestSupport": 287.4335,
+        "rsi14": 55.97,
+        "rvol": 0.8,
+        "sma200": 279.6739,
         "timeframe": "15m",
-        "trendAlignment": "bearish"
+        "trendAlignment": "bullish"
       },
       "upstreamSignal": {
         "action": "open",
-        "assessmentProvider": "copilot_llm",
-        "convictionScore": 0.4,
-        "direction": "sellShort",
+        "assessmentProvider": "gemini_api_key_llm",
+        "convictionScore": 0.8382,
+        "direction": "buy",
         "isFallbackSentiment": false,
-        "suggestedAmountUsd": 350.0,
+        "suggestedAmountUsd": 500.0,
         "suggestedLeverage": 2,
-        "suggestedStopLossRate": 270.96,
-        "suggestedTakeProfitRate": 250.29
+        "suggestedStopLossRate": 285.48,
+        "suggestedTakeProfitRate": 304.64
       }
     }
   },
@@ -2205,8 +2205,8 @@
     "direction": "sellShort",
     "isFallbackSentiment": false,
     "suggestedAmountUsd": 500.0,
-    "suggestedLeverage": 2,
-    "suggestedStopLossRate": 134.02,
-    "suggestedTakeProfitRate": 109.67
+    "suggestedLeverage": 5,
+    "suggestedStopLossRate": 81.51,
+    "suggestedTakeProfitRate": 76.71
   }
 }
